@@ -1,9 +1,10 @@
 h1, h2, p {
     text-align: center;
 }
-body {
+/* body {
     background-color: burlywood;
-}
+} */
 #menu {
     width: 300px;
+    background-color: burlywood;
 }
