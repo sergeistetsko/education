@@ -21,3 +21,15 @@ label {
     display: block;
     margin: 0.5rem 0;
 }
+fieldset {
+    border: 0;
+    border-bottom: 3px solid #3b3b4f;
+    padding: 2rem 0;
+}
+fieldset:last-of-type {
+    border-bottom: none;
+}
+input, textarea, select {
+    width: 100%;
+    margin: 10px 0 0 0;
+}
