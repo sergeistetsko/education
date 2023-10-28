@@ -10,6 +10,7 @@ body {
     width: 100%;
     max-width: 350px;
     height: 300px;
+    object-fit: cover;
 }
 .header {
     text-align: center;
@@ -21,4 +22,11 @@ body {
 }
 .gallery {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
