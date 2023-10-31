@@ -39,6 +39,8 @@ h1, h2 {
 }
 h2 {
     border-bottom: 4px solid #dfdfe2;
+    margin-top: 0;
+    padding-top: 60px;
 }
 .sr-only {
     position: absolute;
@@ -71,4 +73,27 @@ nav > ul > li:hover {
 }
 main {
     padding-top: 25px;
+}
+section {
+    width: 80%;
+    margin: 0 auto 10px auto;
+    max-width: 600px;
+}
+.info {
+    padding: 10px 0 0 5px;
+}
+.formrow {
+    margin-top: 1px;
+    padding: 0 1px 0 1px;
+}
+input {
+    font-size: 18px;
+}
+.info > input {
+    width: 50%;
+    text-align: left;
+}
+.info label {
+    width: 10%;
+    min-width: 55px;
 }
