@@ -85,24 +85,22 @@
               <h2 id="css-questions">CSS</h2>
               <div class="formrow">
                   <div class="question-block">
-                      <label>
+                      <label for="option">
                           Are you a frontend developer?
                       </label>
                   </div>
                   <div class="answer">
-                      <select required>
-                          <option value="">Select an option</option>
-                          <option value="yes">Yes</option>
-                          <option value="no">No</option>
+                      <select required id="option" name="option">
+                          <option value="" name="option">Select an option</option>
+                          <option value="yes" name="option">Yes</option>
+                          <option value="no" name="option">No</option>
                       </select>
                   </div>
                   <div class="question-block">
-                      <label>
-                          Do you have any questions:
-                      </label>
+                      <label for="textarea">Do you have any questions:</label>
                   </div>
                   <div class="answer">
-
+                      <textarea name="textarea" id="textarea" rows="5" cols="24" placeholder="Who is flexbox..."></textarea>
                   </div>
               </div>
           </section>
