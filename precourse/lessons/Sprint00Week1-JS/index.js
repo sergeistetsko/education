@@ -118,7 +118,7 @@ for (let i = 0; i < cards.length; i++) {
     document.write('<b>', card.currentBalance, '</b>');
     document.write('<span>', card.currentBalance, '</span>');
     document.write('<h4>', card.number, '</h4>');
-    document.write('<span>', card.expirationMonth, '/', card.expirationYear, </span>');
+    document.write('<span>', card.expirationMonth, '/', card.expirationYear, '</span>');
 
     document.write("<h2>", "History Transaction", "</h2>");
     document.write("<ul>");
