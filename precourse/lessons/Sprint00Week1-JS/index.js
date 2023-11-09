@@ -87,7 +87,7 @@ document.write('<b>', 'current balance', '</b>', '</br>');
 document.write('<b>', card2.currentBalance, '</b>');
 document.write('<span>', card2.currentBalance, '</span>');
 document.write('<h4>', card2.number, '</h4>');
-document.write('<span>', card2.expirationMonth, '/', card2.expirationYear, </span>');
+document.write('<span>', card2.expirationMonth, '/', card2.expirationYear, '</span>');
 document.write('</div>');
 
 // Просто пример:
