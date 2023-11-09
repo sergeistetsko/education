@@ -70,7 +70,7 @@ for (let i = 0; i < cards.length; i++) {
                 ",",);
                 if (transaction.amount > 0) {
                     document.write(
-                        '<span class="imcome">',transaction.amount, '</span>');
+                        '<span class="income">',transaction.amount, '</span>');
                 } else {
                     document.write(
                         '<span class="outcome">',transaction.amount, '</span>');
