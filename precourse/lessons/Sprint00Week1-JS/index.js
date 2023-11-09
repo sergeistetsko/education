@@ -7,11 +7,6 @@ let card1 = {
     expirationYear: 2025,
     expirationMonth: 9,
     isActive: true,
-    transaction: {
-        title: 'Order Revenue',
-        amount: 874,
-        date: new Date(2022, 3, 25, 16, 43, 22) // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
-    },
     transactions: [
         {
             title: 'Order Revenue',
@@ -20,7 +15,7 @@ let card1 = {
         },
         {
             title: 'Order Revenue',
-            amount: 874,
+            amount: -874,
             date: new Date(2022, 3, 25, 16, 43, 22) // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
         }
     ]
@@ -34,11 +29,6 @@ let card2 = {
     expirationYear: 2026,
     expirationMonth: 4,
     isActive: false,
-    transaction: {
-        title: 'Order Revenue',
-        amount: 874,
-        date: new Date(2022, 3, 25, 16, 43, 22) // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
-    },
     transactions: [
         {
             title: 'Order Revenue',
@@ -47,7 +37,7 @@ let card2 = {
         },
         {
             title: 'Order Revenue',
-            amount: 874,
+            amount: -874,
             date: new Date(2022, 3, 25, 16, 43, 22) // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
         }
     ]
@@ -59,7 +49,7 @@ for (let i = 0; i < cards.length; i++) {
     let card = cards[i];
 
     // render card
-    document.write('<div>');
+    
     document.write('<b>', card.type + ' card', '</b>', '</br>');
     document.write('<b>', card.networkType, '</b>', '</br>');
     document.write('<b>', 'current balance', '</b>', '</br>');
@@ -69,9 +59,28 @@ for (let i = 0; i < cards.length; i++) {
     document.write('<span>', card.expirationMonth, '/', card.expirationYear, '</span>');
     document.write("<h2>", "History Transaction", "</h2>");
     document.write("<ul>");
-    for (let j = 0; j < card.transactions.length; j++) {
-        let transaction = card.transactions[j];
-        document.write("<li>", transaction.title, ", ", transaction.date, ",", transaction.amount, "</li>");
-        document.write("</ul>");
-    }
+    
+        for (let j = 0; j < card.transactions.length; j++) {
+            let transaction = card.transactions[j];
+            document.write(
+                "<li>",
+                transaction.title,
+                ", ",
+                transaction.date,
+                ",",);
+                if (transaction.amount > 0) {
+                    document.write(
+                        '<span class="imcome">',transaction.amount, '</span>');
+                } else {
+                    document.write(
+                        '<span class="outcome">',transaction.amount, '</span>');
+                }
+            
+            
+            document.write(
+                "</li>");
+        }
+    document.write("</ul>");
+    document.write('</div>');
+    document.write("<hr>");
 }
