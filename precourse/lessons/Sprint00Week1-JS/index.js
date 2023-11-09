@@ -57,6 +57,7 @@ let cards = [card1, card2];
 
 for (let i = 0; i < cards.length; i++) {
     let card = cards[i];
+
     // render card
     document.write('<div>');
     document.write('<b>', card.type + ' card', '</b>', '</br>');
@@ -66,11 +67,8 @@ for (let i = 0; i < cards.length; i++) {
     document.write('<span>', card.currentBalance, '</span>');
     document.write('<h4>', card.number, '</h4>');
     document.write('<span>', card.expirationMonth, '/', card.expirationYear, '</span>');
-
     document.write("<h2>", "History Transaction", "</h2>");
-
     document.write("<ul>");
-
     for (let j = 0; j < card.transactions.length; j++) {
         let transaction = card.transactions[j];
         document.write("<li>", transaction.title, ", ", transaction.date, ",", transaction.amount, "</li>");
