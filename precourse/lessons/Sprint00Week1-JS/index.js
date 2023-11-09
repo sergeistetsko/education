@@ -95,3 +95,21 @@ for (let i = 0; i < marks.length; i++) {
     let mark = marks[i];
     console.log("title: " + mark.title, ", mark: " + mark.value);
 }
+
+let cards = [card1, card2];
+
+for (let i = 0; i < cards.length; i++) {
+    let card = cards[i];
+    // render card
+    document.write('<div>');
+    document.write('<b>', card.type + ' card', '</b>', '</br>');
+    document.write('<b>', card.networkType, '</b>', '</br>');
+    document.write('<b>', 'current balance', '</b>', '</br>');
+    document.write('<b>', card.currentBalance, '</b>');
+    document.write('<span>', card.currentBalance, '</span>');
+    document.write('<h4>', card.number, '</h4>');
+    document.write('<span>', card.expirationMonth, '/', card.expirationYear, </span>');
+    document.write('</div>');
+
+    console.log("title: " + card.title, ", mark: " + card.value);
+}
