@@ -75,8 +75,6 @@ for (let i = 0; i < cards.length; i++) {
                     document.write(
                         '<span class="outcome">',transaction.amount, '</span>');
                 }
-            
-            
             document.write(
                 "</li>");
         }
