@@ -76,7 +76,7 @@ document.write('<b>', 'current balance', '</b>', '</br>');
 document.write('<b>', card1.currentBalance, '</b>');
 document.write('<span>', card1.currentBalance, '</span>');
 document.write('<h4>', card1.number, '</h4>');
-document.write('<span>', card1.expirationMonth, '/', card1.expirationYear, </span>');
+document.write('<span>', card1.expirationMonth, '/', card1.expirationYear, '</span>');
 document.write('</div>');
 
 //render card 2
