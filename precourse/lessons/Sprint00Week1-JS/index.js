@@ -1,3 +1,5 @@
+document.write("<h1>", "My Cards", "</h1>");
+
 let card1 = {
     type: 'debit',
     networkType: 'mastercard',
@@ -10,12 +12,12 @@ let card1 = {
     transactions: [
         {
             title: 'Order Revenue',
-            amount: 874,
+            amount: -874,
             date: new Date(2022, 3, 25, 16, 43, 22) // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
         },
         {
             title: 'Order Revenue',
-            amount: -874,
+            amount: 874,
             date: new Date(2022, 3, 25, 16, 43, 22) // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
         }
     ]
@@ -47,19 +49,31 @@ let cards = [card1, card2];
 
 for (let i = 0; i < cards.length; i++) {
     let card = cards[i];
-
     // render card
-    
     document.write('<b>', card.type + ' card', '</b>', '</br>');
     document.write('<b>', card.networkType, '</b>', '</br>');
     document.write('<b>', 'current balance', '</b>', '</br>');
-    document.write('<b>', card.currentBalance, '</b>');
+    
+    let currencySign = "";
+    
+    switch (card.currencyType) {
+        case "USD":
+            currencySign = "$";
+            break;
+        case "EUR":
+            currencySign = "€";
+            break;
+        case "GBR":
+            currencySign = "£";
+            break;
+    }
+
+    document.write('<b>', currencySign + card.currentBalance, '</b>');
     document.write('<span>', card.currentBalance, '</span>');
     document.write('<h4>', card.number, '</h4>');
     document.write('<span>', card.expirationMonth, '/', card.expirationYear, '</span>');
     document.write("<h2>", "History Transaction", "</h2>");
     document.write("<ul>");
-    
         for (let j = 0; j < card.transactions.length; j++) {
             let transaction = card.transactions[j];
             document.write(
