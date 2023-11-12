@@ -67,7 +67,7 @@ document.write('<b>', 'current balance', '</b>', '</br>');
 document.write('<span>', card1.currentBalance, '</span>', '</br>');
 document.write('<h4>', card1.number, '</h4>', '</br>');
 document.write('<span>', card1.expirationMonth, '/', card1.expirationYear,  '</span>', '</br>');
-document.write('</div>');
+document.write('</div>', '</br>');
 
 //render card 2
 
@@ -77,5 +77,25 @@ document.write('<b>', card2.networkType, '</b>', '</br>');
 document.write('<b>', 'current balance', '</b>', '</br>');
 document.write('<span>', card2.currentBalance, '</span>', '</br>');
 document.write('<h4>', card2.number, '</h4>', '</br>');
-document.write('<span>', card2.expirationMonth, '/', card2.expirationYear,  '</span>', '</br>');
+document.write('<span>', card2.expirationMonth, '/', card2.expirationYear, '</span>', '</br>');
 document.write('</div>');
+
+// Просто пример:
+
+let marks = [
+    {
+        title: 'JS',
+        value: 10,
+    },
+    {
+        title: 'CS',
+        value: 6,
+    }
+];
+
+// отобразим в консоли все заголовки с оценками
+
+for (let i = 0; i <= marks.length; i++) {
+    let mark = marks[i];
+    console.log("title: " + mark.title, ", mark: " + mark.value);
+}
