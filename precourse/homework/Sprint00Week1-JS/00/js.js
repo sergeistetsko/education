@@ -107,7 +107,7 @@ for (let i = 0; i < cards.length; i++) {
         card.transaction.amount,
         "</li>");
     document.write("</ul>");
-    document.write('</div>', '</br>');
+    document.write('</div>', '<hr>');
 }
 /*
 // Просто пример:
