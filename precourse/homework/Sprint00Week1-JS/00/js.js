@@ -45,7 +45,7 @@ let card1 = {
     transactions: [
         {
             title: 'Order Revenue',
-            amount: 874,
+            amount: -874,
             date: new Date(2022, 3, 25, 16, 43, 22) // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
         },
         {
@@ -73,7 +73,7 @@ let card2 = {
         },
         {
             title: 'Order Revenue',
-            amount: 874,
+            amount: -874,
             date: new Date(2022, 3, 25, 16, 43, 22) // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
         }
     ]
@@ -90,12 +90,12 @@ let card3 = {
     transactions: [
         {
             title: 'Order Revenue',
-            amount: 874,
+            amount: -874,
             date: new Date(2022, 3, 25, 16, 43, 22) // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
         },
         {
             title: 'Order Revenue',
-            amount: 874,
+            amount: -874,
             date: new Date(2022, 3, 25, 16, 43, 22) // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
         }
         ]
@@ -124,13 +124,29 @@ for (let i = 0; i < cards.length; i++) {
     
     for (let j = 0; j < card.transactions.length; j++) {
         let transaction = card.transactions[j];
-        document.write("<li>",
+        document.write(
+            "<li>",
             transaction.title,
             ", ",
             transaction.date,
-            ",",
-            transaction.amount,
-            "</li>");
+            ","
+        );
+        if (transaction.amount > 0) {
+            document.write(
+                '<span class="income">',
+                transaction.amount,
+                '</span>'
+            );
+        } else {
+            document.write(
+                '<span class="outcome">',
+                transaction.amount,
+                '</span>'
+            );
+        }
+            document.write(
+            "</li>"
+        );
     }
     document.write("</ul>");
     document.write('</div>', '<hr>');
