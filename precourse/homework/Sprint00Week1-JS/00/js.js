@@ -24,5 +24,8 @@ let student = {
     }
 }
 
-
+document.write(student.info.firstName);
+document.write(student.info.lastName);
+document.write(student.address.country);
+document.write(student.address.city);
 
