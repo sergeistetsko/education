@@ -143,17 +143,17 @@ for (let i = 0; i < cards.length; i++) {
     document.write('<span>', currencySign + card.currentBalance, '</span>', '</br>');
     document.write('<h4>', card.number, '</h4>', '</br>');
     document.write('<span>', card.expirationMonth, '/', card.expirationYear,  '</span>', '</br>');
-    document.write("<h2>", "History Transaction", "</h2>");
-    document.write("<ul>");
+    document.write('<h2>', "History Transaction", '</h2>');
+    document.write('<ul>');
 
     for (let j = 0; j < card.transactions.length; j++) {
         let transaction = card.transactions[j];
         document.write(
-            "<li>",
+            '<li>',
             transaction.title,
-            ", ",
+            ', ',
             transaction.date,
-            ","
+            ','
         );
         if (transaction.amount > 0) {
             document.write(
@@ -169,10 +169,10 @@ for (let i = 0; i < cards.length; i++) {
             );
         }
         document.write(
-            "</li>"
+            '</li>'
         );
     }
-    document.write("</ul>");
+    document.write('</ul>');
     document.write('</div>', '<hr>');
 }
 /*
