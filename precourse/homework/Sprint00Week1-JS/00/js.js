@@ -116,12 +116,26 @@ for (let i = 0; i < cards.length; i++) {
     document.write('<b>', card.type + ' card', '</b>', '</br>');
     document.write('<b>', card.networkType, '</b>', '</br>');
     document.write('<b>', 'current balance', '</b>', '</br>');
-    document.write('<span>', card.currentBalance, '</span>', '</br>');
+
+    let currencySign = '';
+    switch (card.currencyType) {
+        case 'USD':
+            currencySign = '$';
+            break;
+        case 'EUR':
+            currencySign = '€';
+            break;
+        case 'GBP':
+            currencySign = '£';
+            break;
+    }
+    
+    document.write('<span>', currencySign + card.currentBalance, '</span>', '</br>');
     document.write('<h4>', card.number, '</h4>', '</br>');
     document.write('<span>', card.expirationMonth, '/', card.expirationYear,  '</span>', '</br>');
     document.write("<h2>", "History Transaction", "</h2>");
     document.write("<ul>");
-    
+
     for (let j = 0; j < card.transactions.length; j++) {
         let transaction = card.transactions[j];
         document.write(
@@ -144,7 +158,7 @@ for (let i = 0; i < cards.length; i++) {
                 '</span>'
             );
         }
-            document.write(
+        document.write(
             "</li>"
         );
     }
