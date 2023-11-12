@@ -54,32 +54,28 @@ let card2 = {
     expirationMonth: 4,
     isActive: false
 };
+
+let cards = [card1,card2];
+
 //render
+
 document.write('<h1>', 'Hello, ' + currentUser.name, '</h1>');
 document.write('<h2>', 'Cards: ', '</h2>');
 
-//render card 1
+//render card
 
-document.write('<div>');
-document.write('<b>', card1.type + ' card', '</b>', '</br>');
-document.write('<b>', card1.networkType, '</b>', '</br>');
-document.write('<b>', 'current balance', '</b>', '</br>');
-document.write('<span>', card1.currentBalance, '</span>', '</br>');
-document.write('<h4>', card1.number, '</h4>', '</br>');
-document.write('<span>', card1.expirationMonth, '/', card1.expirationYear,  '</span>', '</br>');
-document.write('</div>', '</br>');
-
-//render card 2
-
-document.write('<div>');
-document.write('<b>', card2.type + ' card', '</b>', '</br>');
-document.write('<b>', card2.networkType, '</b>', '</br>');
-document.write('<b>', 'current balance', '</b>', '</br>');
-document.write('<span>', card2.currentBalance, '</span>', '</br>');
-document.write('<h4>', card2.number, '</h4>', '</br>');
-document.write('<span>', card2.expirationMonth, '/', card2.expirationYear, '</span>', '</br>');
-document.write('</div>');
-
+for (let i = 0; i < cards.length; i++) {
+    let card = cards[i];
+    document.write('<div>');
+    document.write('<b>', card.type + ' card', '</b>', '</br>');
+    document.write('<b>', card.networkType, '</b>', '</br>');
+    document.write('<b>', 'current balance', '</b>', '</br>');
+    document.write('<span>', card.currentBalance, '</span>', '</br>');
+    document.write('<h4>', card.number, '</h4>', '</br>');
+    document.write('<span>', card.expirationMonth, '/', card.expirationYear,  '</span>', '</br>');
+    document.write('</div>', '</br>');
+}
+/*
 // Просто пример:
 
 let marks = [
@@ -95,7 +91,7 @@ let marks = [
 
 // отобразим в консоли все заголовки с оценками
 
-for (let i = 0; i <= marks.length; i++) {
+for (let i = 0; i < marks.length; i++) {
     let mark = marks[i];
     console.log("title: " + mark.title, ", mark: " + mark.value);
-}
+}*/
