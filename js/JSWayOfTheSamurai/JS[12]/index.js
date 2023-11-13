@@ -9,6 +9,10 @@ console.log(grade4);*/
 
 let grades = [5,6,7,8,9];
 
+let extractedGrade = grades[4];
+
 console.log(grades[0]);
 console.log(grades[3]);
 console.log(grades[10]);
+
+console.log(extractedGrade)
