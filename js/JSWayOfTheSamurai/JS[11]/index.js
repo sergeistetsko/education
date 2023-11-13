@@ -1,3 +1,4 @@
+/*
 let myConsole = {
     name: 'Sergey',
     age: 30
@@ -25,4 +26,21 @@ const moneyTransfering = {
     to: 'Dima',
     amount: 10
 }
-console.log(laptop1.manufacturer.factoriesCount);
+console.log(laptop1.manufacturer.factoriesCount);*/
+
+const word0 = {
+        original: 'Wassup',
+        translation: 'Здарова'
+    }
+const word1 = {
+    original: 'Bye',
+    translation: 'Покеда'
+}
+const word2 = {
+    original: 'Programmer',
+    translation: 'Программист'
+}
+const resultMessages = {
+    finishSucces: 'Молодец. Good result!',
+    finishUnsucces: 'Молодец. Но постарайся лучше!',
+}
