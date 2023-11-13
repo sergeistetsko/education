@@ -17,4 +17,4 @@ if (window.isNaN(productPrice1)) {
     document.write('You input incorrect number');
 }
 
-document.write('<br>','END');
+document.write('<br>', 'END');
