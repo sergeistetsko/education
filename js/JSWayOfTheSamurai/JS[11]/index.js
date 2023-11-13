@@ -64,22 +64,22 @@ const result = {
 
 alert(notificationMessages.start.hello);
 
-const userAnswer0 = prompt(word0.original);
-alert(userAnswer0 === word0.translation);
-if (userAnswer0 === word0.translation) {
+const userAnswer0 = prompt(vocabulary.words.word0.original);
+alert(userAnswer0 === vocabulary.words.word0.translation);
+if (userAnswer0 === vocabulary.words.word0.translation) {
     result.correctAnswersCount = result.correctAnswersCount + 1;
 }
-const userAnswer1 = prompt(word1.original);
-alert(userAnswer1 === word1.translation);
-if (userAnswer1 === word1.translation) {
+const userAnswer1 = prompt(vocabulary.words.word1.original);
+alert(userAnswer1 === vocabulary.words.word1.translation);
+if (userAnswer1 === vocabulary.words.word1.translation) {
     result.correctAnswersCount = result.correctAnswersCount + 1;
 }
-const userAnswer2 = prompt(word2.original);
-alert(userAnswer2 === word2.translation);
-if (userAnswer2 === word2.translation) {
+const userAnswer2 = prompt(vocabulary.words.word2.original);
+alert(userAnswer2 === vocabulary.words.word2.translation);
+if (userAnswer2 === vocabulary.words.word2.translation) {
     result.correctAnswersCount = result.correctAnswersCount + 1;
 }
-const userCorrectAnswersPercent = result.correctAnswersCount / wordsCount * 100;
+const userCorrectAnswersPercent = result.correctAnswersCount / vocabulary.wordsCount * 100;
 
 if (userCorrectAnswersPercent > settings.correctAnswersMinPercent) {
     alert(notificationMessages.result.finishSucces);
