@@ -38,4 +38,8 @@ let persons = [
         surname: 'Петров',
         birthYear: 1985
     }
-]
+];
+
+let person = persons[1].birthYear;
+
+console.log(person);
