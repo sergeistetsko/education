@@ -26,6 +26,7 @@ console.log(books[1]);*/
 /*let answers = [true, false, true, true];
 console.log(answers[1]);*/
 
+/*
 
 let persons = [
     {
@@ -42,4 +43,11 @@ let persons = [
 
 let person = persons[1].birthYear;
 
-console.log(person);
+console.log(person);*/
+
+let shoppingLists = [
+    ['молоко', 'xлеб', 'яйца'],
+    ['сок','мороженое'],
+    ['корм для кота', 'шампунь']
+];
+shoppingLists[1][0];
