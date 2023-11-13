@@ -52,7 +52,10 @@ let shoppingLists = [
     ['корм для кота', 'шампунь']
 ]
 for (let i = 0; i < shoppingLists.length; i++) {
+    document.write('Список ', i + 1, '<br>')
+    document.write('-----------------', '<br>')
     for (let j = 0; j < shoppingLists[i].length; j++) {
-        document.write(shoppingLists[i][j], '<br>')
+        document.write(j + 1, ' - ', shoppingLists[i][j], '<br>')
     }
+    document.write('<br>')
 }
