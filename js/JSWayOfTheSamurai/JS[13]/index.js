@@ -35,10 +35,15 @@ if (index <= repeatCount) {
     document.write('a');
 }*/
 
-let repeatCount = 0;
+/*let repeatCount = 15;
 
-for (let index = 1; index <= repeatCount; repeatCount++) {
+for (let index = 0; index <= repeatCount; index++) {
     document.write('a');
-}
+}*/
 
+let grades = [5,4,3];
+
+for (let i = 0; i < grades.length; i++) {
+    document.write(grades[0], '<br>')
+}
 
