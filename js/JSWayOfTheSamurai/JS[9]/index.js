@@ -1,9 +1,10 @@
 let balance = 100;
-const productPrice1 = 110;
 
 // ------------
 
 document.write('START', '<br>');
+
+const productPrice1 = prompt('How much does product cost?');
 
 if (balance >= productPrice1) {
     document.write('Product purchased');
