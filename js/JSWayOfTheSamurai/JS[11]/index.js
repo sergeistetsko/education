@@ -8,7 +8,11 @@ window.alert(myConsole.age);
 
 const laptop1 = {
     name: 'zenbook',
-    manufacturer: 'ASUS',
+    manufacturer: {
+        title: 'ASUS',
+        factoriesCount: 10,
+        factoryAddress: 'China, JohueLee 12'
+    },
     price: 1000
 }
 const laptop2 = {
@@ -21,3 +25,4 @@ const moneyTransfering = {
     to: 'Dima',
     amount: 10
 }
+console.log(laptop1.manufacturer.factoriesCount);
