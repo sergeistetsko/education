@@ -51,3 +51,6 @@ let shoppingLists = [
     ['корм для кота', 'шампунь']
 ]
 console.log(shoppingLists[1][0]);
+
+let shoppingListsLength = shoppingLists.length;
+console.log(shoppingListsLength);
