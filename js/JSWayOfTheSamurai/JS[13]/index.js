@@ -72,6 +72,14 @@ const words = [
     {
         original: 'Programmer',
         translation: 'Программист'
+    },
+    {
+        original: 'Laptop',
+        translation: 'Ноутбук'
+    },
+    {
+        original: 'Screen',
+        translation: 'Экран'
     }
 ]
 
