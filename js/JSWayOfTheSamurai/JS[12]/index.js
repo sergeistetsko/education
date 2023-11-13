@@ -47,7 +47,7 @@ console.log(person);*/
 
 let shoppingLists = [
     ['молоко', 'xлеб', 'яйца'],
-    ['сок','мороженое'],
+    ['сок', 'мороженое'],
     ['корм для кота', 'шампунь']
-];
-shoppingLists[1][0];
+]
+console.log(shoppingLists[1][0]);
