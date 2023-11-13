@@ -1,4 +1,4 @@
-//исходные данные
+/*//исходные данные
 const repeatCount = 0;
 
 //инициализация стартового значения
@@ -32,6 +32,12 @@ if (index <= repeatCount) {
 }
 index = 7;
 if (index <= repeatCount) {
+    document.write('a');
+}*/
+
+let repeatCount = 0;
+
+for (let index = 1; index <= repeatCount; repeatCount++) {
     document.write('a');
 }
 
