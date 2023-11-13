@@ -1,20 +1,28 @@
-// Объявление данных
+// ---------------------------
 
-let word0 = 'Wassup';
-let word1 = 'Bye';
-let word2 = 'Programmer';
+const word0 = 'Wassup';
+const word1 = 'Bye';
+const word2 = 'Programmer';
 
-let wordTranslation0 = 'Здарова';
-let wordTranslation1 = 'Покеда';
-let wordTranslation2 = 'Программист';
+const wordTranslation0 = 'Здарова';
+const wordTranslation1 = 'Покеда';
+const wordTranslation2 = 'Программист';
 
-let finishMessage = 'Финиш';
+const wordsCount = 3;
 
-let userAnswer0 = prompt(word0);
+const finishMessage = 'Молодец';
+
+let correctAnswersCount = 0;
+
+// ---------------------------
+
+const userAnswer0 = prompt(word0);
 alert(wordTranslation0);
-let userAnswer1 = prompt(word1);
+
+const userAnswer1 = prompt(word1);
 alert(wordTranslation1);
-let userAnswer2 = prompt(word2)
+
+const userAnswer2 = prompt(word2)
 alert(wordTranslation2);
 
 alert(finishMessage);
