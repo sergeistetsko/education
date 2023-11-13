@@ -40,7 +40,44 @@ const word2 = {
     original: 'Programmer',
     translation: 'Программист'
 }
-const resultMessages = {
-    finishSucces: 'Молодец. Good result!',
-    finishUnsucces: 'Молодец. Но постарайся лучше!',
+const wordsCount = 3;
+const notificationMessages = {
+    start: {
+        hello: 'Hello man. You can learn English. Good Luck'
+    },
+    result: {
+        finishSucces: 'Молодец. Good result!',
+        finishUnsucces: 'Молодец. Но постарайся лучше!'
+    }
+}
+const settings = {
+    correctAnswersMinPercent: 50
+}
+const result = {
+    correctAnswersCount: 0
+}
+
+alert(notificationMessages.start.hello);
+
+const userAnswer0 = prompt(word0.original);
+alert(userAnswer0 === word0.translation);
+if (userAnswer0 === word0.translation) {
+    result.correctAnswersCount = result.correctAnswersCount + 1;
+}
+const userAnswer1 = prompt(word1.original);
+alert(userAnswer1 === word1.translation);
+if (userAnswer1 === word1.translation) {
+    result.correctAnswersCount = result.correctAnswersCount + 1;
+}
+const userAnswer2 = prompt(word2.original);
+alert(userAnswer2 === word2.translation);
+if (userAnswer2 === word2.translation) {
+    result.correctAnswersCount = result.correctAnswersCount + 1;
+}
+const userCorrectAnswersPercent = result.correctAnswersCount / wordsCount * 100;
+
+if (userCorrectAnswersPercent > settings.correctAnswersMinPercent) {
+    alert(notificationMessages.result.finishSucces);
+} else {
+    alert(notificationMessages.result.finishUnsucces);
 }
