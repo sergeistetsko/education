@@ -17,8 +17,12 @@ console.log(grades[10]);
 
 console.log(extractedGrade)*/
 
-let books = ['Война и мир', 'Мастер и Маргарита', 'Преступление и наказание'];
-let masterAndMargoBook = books[1];
-console.log(books[1]);
+/*let books = ['Война и мир', 'Мастер и Маргарита', 'Преступление и наказание'];
 
+let masterAndMargoBook = books[1];
+
+console.log(books[1]);*/
+
+let answers = [true, false, true, true];
+console.log(answers[1]);
 
