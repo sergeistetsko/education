@@ -23,6 +23,19 @@ let masterAndMargoBook = books[1];
 
 console.log(books[1]);*/
 
-let answers = [true, false, true, true];
-console.log(answers[1]);
+/*let answers = [true, false, true, true];
+console.log(answers[1]);*/
 
+
+let persons = [
+    {
+        name: 'Анна',
+        surname: 'Смирнова',
+        birthYear: 1990
+    },
+    {
+        name: 'Иван',
+        surname: 'Петров',
+        birthYear: 1985
+    }
+]
