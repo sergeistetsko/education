@@ -46,6 +46,7 @@ for (let index = 0; index <= repeatCount; index++) {
 for (let i = 0; i < grades.length; i++) {
     document.write(grades[i], '<br>')
 }*/
+/*
 let shoppingLists = [
     ['молоко', 'xлеб', 'яйца'],
     ['сок', 'мороженое'],
@@ -58,4 +59,52 @@ for (let i = 0; i < shoppingLists.length; i++) {
         document.write(j + 1, ' - ', shoppingLists[i][j], '<br>')
     }
     document.write('<br>')
+}*/
+const words = [
+    {
+        original: 'Wassup',
+        translation: 'Здарова'
+    },
+    {
+        original: 'Bye',
+        translation: 'Покеда'
+    },
+    {
+        original: 'Programmer',
+        translation: 'Программист'
+    }
+]
+
+const notificationMessages = {
+    start: {
+        hello: 'Hello man. You can learn English. Good Luck'
+    },
+    result: {
+        finishSucces: 'Молодец. Good result!',
+        finishUnsucces: 'Молодец. Но постарайся лучше!'
+    }
+}
+const settings = {
+    correctAnswersMinPercent: 50
+}
+const result = {
+    correctAnswersCount: 0
+}
+
+alert(notificationMessages.start.hello);
+
+for (let i = 0; i < words.length; i++) {
+    let userAnswer = prompt(words[i].original);
+    alert(userAnswer === words[i].translation);
+    if (userAnswer === words[i].translation) {
+        result.correctAnswersCount = result.correctAnswersCount + 1;
+    }
+}
+
+const userCorrectAnswersPercent = result.correctAnswersCount / words.length * 100;
+
+if (userCorrectAnswersPercent > settings.correctAnswersMinPercent) {
+    alert(notificationMessages.result.finishSucces);
+} else {
+    alert(notificationMessages.result.finishUnsucces);
 }
