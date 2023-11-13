@@ -27,19 +27,24 @@ const moneyTransfering = {
     amount: 10
 }
 console.log(laptop1.manufacturer.factoriesCount);*/
+const vocabulary = {
+    words: {
+        word0: {
+            original: 'Wassup',
+            translation: 'Здарова'
+        },
+        word1: {
+            original: 'Bye',
+            translation: 'Покеда'
+        },
+        word2: {
+            original: 'Programmer',
+            translation: 'Программист'
+        }
+    },
+    wordsCount: 3
+}
 
-const word0 = {
-        original: 'Wassup',
-        translation: 'Здарова'
-    }
-const word1 = {
-    original: 'Bye',
-    translation: 'Покеда'
-}
-const word2 = {
-    original: 'Programmer',
-    translation: 'Программист'
-}
 const wordsCount = 3;
 const notificationMessages = {
     start: {
