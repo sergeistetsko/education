@@ -1,4 +1,4 @@
-// ---------------------------
+// Блок данных
 
 const word0 = 'Wassup';
 const word1 = 'Bye';
@@ -13,11 +13,11 @@ const wordsCount = 3;
 const finishSuccessMessage = "Молодец. Good result!";
 const finishUnsuccessMessage = "Молодец. Но постарайся лучше!";
 
-const finishMessage = 'Молодец';
+const correctAnswersMinPercent = 50;
 
 let correctAnswersCount = 0;
 
-// ---------------------------
+// Блок логики
 
 const userAnswer0 = prompt(word0);
 alert(wordTranslation0 === wordTranslation0);
@@ -37,7 +37,9 @@ if (wordTranslation2 === wordTranslation2) {
     correctAnswersCount = correctAnswersCount + 1;
 }
 
-if ((correctAnswersCount / wordsCount * 100) > 50) {
+const userCorrectAnswersPercent = correctAnswersCount / wordsCount * 100;
+
+if (userCorrectAnswersPercent > 50) {
     alert(finishSuccessMessage);
 } else {
     alert(finishUnsuccessMessage);
