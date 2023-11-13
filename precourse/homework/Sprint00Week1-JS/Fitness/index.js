@@ -71,9 +71,8 @@ document.write('<img src=', header.imageName.image1, '>');
 document.write('<img src=', header.imageName.image2, '>');
 document.write('</div>');
 document.write('</header>');
-/*
-// render section 1
 
+// render section 1
 
 document.write('<section>');
 document.write('<h3>', sections.titleLevel3[0], '</h3>');
@@ -143,28 +142,5 @@ document.write('<img src=', sections.imageWay[11], '>');
 document.write('</div>');
 document.write('</ol>');
 document.write('</div>');
-document.write('</section>');*/
-
-// render section i
-document.write('<h2>', sections.titleLevel2, '</h2>');
-document.write('<section>');
-for (let i = 0; i < sections.titleLevel3.length; i++) {
-    document.write('<h3>', sections.titleLevel3[i], '</h3>');    
-}
-document.write('<div>');
-for (let i = 0; i < sections.titleLevel4.length; i++) {
-    document.write('<h4>', sections.titleLevel4[i], '</h4>');
-}
-document.write('<ol>');
-for (let i = 0; i < sections.listItemContent.length; i++) {
-    for (let j = 0; j < sections.listItemContent[i][j]; j++) {
-        document.write('<li>', sections.listItemContent[i][j], '</li>');
-    }
-}
-document.write('</ol>');
-document.write('<div>');
-for (let i = 0; i <= 3; i++) {
-    document.write('<img src=', sections.imageWay[i], '>');
-}
-document.write('</div>');
 document.write('</section>');
+
