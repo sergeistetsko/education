@@ -41,9 +41,18 @@ for (let index = 0; index <= repeatCount; index++) {
     document.write('a');
 }*/
 
-let grades = [5,4,3];
+/*let grades = [5,4,3];
 
 for (let i = 0; i < grades.length; i++) {
     document.write(grades[i], '<br>')
+}*/
+let shoppingLists = [
+    ['молоко', 'xлеб', 'яйца'],
+    ['сок', 'мороженое'],
+    ['корм для кота', 'шампунь']
+]
+for (let i = 0; i < shoppingLists.length; i++) {
+    for (let j = 0; j < shoppingLists[i].length; j++) {
+        document.write(shoppingLists[i][j], '<br>')
+    }
 }
-
