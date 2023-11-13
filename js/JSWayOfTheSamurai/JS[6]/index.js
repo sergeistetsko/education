@@ -39,7 +39,7 @@ if (wordTranslation2 === wordTranslation2) {
 
 const userCorrectAnswersPercent = correctAnswersCount / wordsCount * 100;
 
-if (userCorrectAnswersPercent > 50) {
+if (userCorrectAnswersPercent > correctAnswersMinPercent) {
     alert(finishSuccessMessage);
 } else {
     alert(finishUnsuccessMessage);
