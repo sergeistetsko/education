@@ -44,6 +44,6 @@ for (let index = 0; index <= repeatCount; index++) {
 let grades = [5,4,3];
 
 for (let i = 0; i < grades.length; i++) {
-    document.write(grades[0], '<br>')
+    document.write(grades[i], '<br>')
 }
 
