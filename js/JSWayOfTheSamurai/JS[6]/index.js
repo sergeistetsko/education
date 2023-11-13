@@ -1,3 +1,5 @@
+// Объявление данных
+
 let word0 = 'Wassup';
 let word1 = 'Bye';
 let word2 = 'Programmer';
@@ -6,11 +8,13 @@ let wordTranslation0 = 'Здарова';
 let wordTranslation1 = 'Покеда';
 let wordTranslation2 = 'Программист';
 
-alert(word0);
+let finishMessage = 'Финиш';
+
+let userAnswer0 = prompt(word0);
 alert(wordTranslation0);
-alert(word1);
+let userAnswer1 = prompt(word1);
 alert(wordTranslation1);
-alert(word2);
+let userAnswer2 = prompt(word2)
 alert(wordTranslation2);
 
-alert('Финиш');
+alert(finishMessage);
