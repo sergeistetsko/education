@@ -56,91 +56,57 @@ let sections = {
             "./assets/images/image12.svg"
         ]
 }
+
 // render header
-document.write('<header>');
-document.write('<a href="#">');
-document.write('<span>', header.logotypeName, '</span>');
-document.write('<a>');
-document.write('<div>');
-document.write('<h1>', header.titleLevel1, '</h1>');
-document.write('<p>', header.paragraphContent, '</p>');
-document.write('<button type="button">', header.buttonName, '</button>');
-document.write('</div>');
-document.write('<div>');
-document.write('<img src=', header.imageName.image1, '>');
-document.write('<img src=', header.imageName.image2, '>');
-document.write('</div>');
-document.write('</header>');
+document.write(`
+<header>
+    <a href="#"><span>${header.logotypeName}</span></a>
+    <div>
+        <h1>${header.titleLevel1}</h1>
+        <p>${header.paragraphContent}</p>
+        <button type="button">${header.buttonName}</button>
+    </div>
+    <div>
+        <img src="${header.imageName.image1}">
+        <img src="${header.imageName.image2}">
+    </div>
+</header>
+`);
 
-// render section 1
-
-document.write('<section>');
-document.write('<h3>', sections.titleLevel3[0], '</h3>');
-document.write('<div>');
-document.write('<h4>', sections.titleLevel4[0], '</h4>');
-document.write('<ol>');
-document.write('<li>', sections.listItemContent[0][0], '</li>');
-document.write('<li>', sections.listItemContent[0][1], '</li>');
-document.write('<li>', sections.listItemContent[0][2], '</li>');
-document.write('<li>', sections.listItemContent[0][3], '</li>');
-document.write('</div>');
-document.write('<div>');
-document.write('<img src=', sections.imageWay[0], '>');
-document.write('<img src=', sections.imageWay[1], '>');
-document.write('<img src=', sections.imageWay[2], '>');
-document.write('</div>');
-document.write('</ol>');
-document.write('</div>');
-
-document.write('<div>');
-document.write('<h4>', sections.titleLevel4[1], '</h4>');
-document.write('<ol>');
-document.write('<li>', sections.listItemContent[1][0], '</li>');
-document.write('<li>', sections.listItemContent[1][1], '</li>');
-document.write('<li>', sections.listItemContent[1][2], '</li>');
-document.write('<li>', sections.listItemContent[1][3], '</li>');
-document.write('</div>');
-document.write('<div>');
-document.write('<img src=', sections.imageWay[3], '>');
-document.write('<img src=', sections.imageWay[4], '>');
-document.write('<img src=', sections.imageWay[5], '>');
-document.write('</div>');
-document.write('</ol>');
-document.write('</div>');
-document.write('<hr>');
-document.write('</section>');
-
-// render section 2
-document.write('<section>');
-document.write('<h3>', sections.titleLevel3[1], '</h3>');
-document.write('<div>');
-document.write('<h4>', sections.titleLevel4[2], '</h4>');
-document.write('<ol>');
-document.write('<li>', sections.listItemContent[2][0], '</li>');
-document.write('<li>', sections.listItemContent[2][1], '</li>');
-document.write('<li>', sections.listItemContent[2][2], '</li>');
-document.write('<li>', sections.listItemContent[2][3], '</li>');
-document.write('<div>');
-document.write('<img src=', sections.imageWay[6], '>');
-document.write('<img src=', sections.imageWay[7], '>');
-document.write('<img src=', sections.imageWay[8], '>');
-document.write('</div>');
-document.write('</ol>');
-document.write('</div>');
-
-document.write('<div>');
-document.write('<h4>', sections.titleLevel4[3], '</h4>');
-document.write('<ol>');
-document.write('<li>', sections.listItemContent[3][0], '</li>');
-document.write('<li>', sections.listItemContent[3][1], '</li>');
-document.write('<li>', sections.listItemContent[3][2], '</li>');
-document.write('<li>', sections.listItemContent[3][3], '</li>');
-document.write('<div>');
-document.write('<img src=', sections.imageWay[9], '>');
-document.write('<img src=', sections.imageWay[10], '>');
-document.write('<img src=', sections.imageWay[11], '>');
-document.write('</div>');
-document.write('</ol>');
-document.write('</div>');
-document.write('</section>');
-
+// render sections
+document.write(`<h2>${sections.titleLevel2}</h2>`);
+for (let i = 0; i < sections.titleLevel3.length; i++) {
+    document.write(`
+    <section>
+        <h3>${sections.titleLevel3[i]}</h3>
+        <div>
+            <h4>${sections.titleLevel4[i*2]}</h4>
+            <ol>
+                <li>${sections.listItemContent[i*2][0]}</li>
+                <li>${sections.listItemContent[i*2][1]}</li>
+                <li>${sections.listItemContent[i*2][2]}</li>
+                <li>${sections.listItemContent[i*2][3]}</li>
+            </ol>
+        </div>
+        <div>
+            <img src="${sections.imageWay[i*6]}">
+            <img src="${sections.imageWay[i*6+1]}">
+            <img src="${sections.imageWay[i*6+2]}">
+        </div>
+        <div>
+            <h4>${sections.titleLevel4[i*2+1]}</h4>
+            <ol>
+                <li>${sections.listItemContent[i*2+1][0]}</li>
+                <li>${sections.listItemContent[i*2+1][1]}</li>
+                <li>${sections.listItemContent[i*2+1][2]}</li>
+                <li>${sections.listItemContent[i*2+1][3]}</li>
+            </ol>
+        </div>
+        <div>
+            <img src="${sections.imageWay[i*6+3]}">
+            <img src="${sections.imageWay[i*6+4]}">
+            <img src="${sections.imageWay[i*6+5]}">
+        </div>
+    </section>
+    `);
+}
