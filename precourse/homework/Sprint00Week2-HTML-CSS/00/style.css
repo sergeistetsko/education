@@ -29,3 +29,31 @@ button {
     letter-spacing: 1.4px;
     text-transform: uppercase;
 }
+.main-title {
+    color: #363940;
+    font-size: 58px;
+    font-weight: 500;
+    line-height: 68px;
+    margin-bottom: 30px;
+}
+
+.text {
+    color: #95A1BB;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 40px;
+}
+
+.button {
+    width: 152px;
+    height: 51px;
+    border-radius: 4px;
+    background: #0A61F7;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: 500;
+    line-height: 19.6px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
