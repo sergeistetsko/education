@@ -19,4 +19,13 @@ button {
 }
 .header {
     background-color: #0A61F7;
+    padding: 14px 0;
+}
+.menu-link {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
 }
