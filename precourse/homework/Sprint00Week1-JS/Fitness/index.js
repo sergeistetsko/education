@@ -4,7 +4,7 @@ let header = {
     titleLevel1: 'Online Fitness',
     paragraphContent: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     buttonName: 'Get Started',
-    imageNames:
+    imageSources:
         [
             "./assets/images/wepik-export.svg",
             "./assets/images/Group140.svg"
@@ -89,7 +89,7 @@ document.write(`
     <h2>${header.titleLevel1}</h2>
     <p>${header.paragraphContent}</p>
     <button>${header.buttonName}</button>
-    ${header.imageNames.map(src => `<img src="${src}">`).join('')}
+    ${header.imageSources.map(src => `<img src="${src}">`).join('')}
 </header>
 `);
 
