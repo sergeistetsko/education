@@ -8,7 +8,7 @@ renderCards(cards);
 
 function getCurrentUser() {
     let newUser = {
-        name: 'Alex',
+        name: 'Sergey',
     };
     return newUser;
 }
@@ -87,7 +87,7 @@ function getCards() {
     return cards;
 }
 function renderHeader(userName) {
-    document.write("<h1>", "Hello, " + userName.name, "</h1>");
+    document.write("<h1>", "Hello, " + userName, "</h1>");
 }
 function renderCards(cards) {
     document.write("<h2>", "Cards: ", "</h2>");
