@@ -12,6 +12,7 @@ function getCurrentUser() {
     };
     return newUser;
 }
+
 function getCards() {
     let card1 = {
         type: "debit",
@@ -86,13 +87,19 @@ function getCards() {
     let cards = [card1, card2, card3];
     return cards;
 }
-function renderHeader(userName) {
+
+function renderHeader(userName, userBalance) {
     document.write("<h1>", "Hello, " + userName, "</h1>");
 }
+
 function renderCards(cards) {
     document.write("<h2>", "Cards: ", "</h2>");
+
     for (let i = 0; i < cards.length; i++) {
+        document.write('<div>');
         renderCard(cards[i]);
+        renderCardTransactions(cards[i].transactions);
+        document.write('</div>');
     }
 }
 function renderCard(card) {
@@ -125,8 +132,6 @@ function renderCard(card) {
             currencySign = "💷";
             break;
     }
-
-
     document.write("<span>", currencySign + card.currentBalance, "</span>", "<br>");
     document.write("<h4>", card.number, "</h4>");
     document.write(
@@ -136,11 +141,14 @@ function renderCard(card) {
         card.expirationYear,
         "</span>"
     );
+}
+
+function renderCardTransactions(transactions) {
     document.write("<h2>", "History Transaction", "</h2>");
     document.write("<ul>");
 
-    for (let j = 0; j < card.transactions.length; j++) {
-        let transaction = card.transactions[j];
+    for (let j = 0; j < transactions.length; j++) {
+        let transaction = transactions[j];
 
         document.write("<li>", transaction.title, ", ", transaction.date, ",");
 
