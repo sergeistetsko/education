@@ -6,8 +6,7 @@ const cards = getCards();
 renderHeader(currentUser.name);
 
 for (let i = 0; i < cards.length; i++) {
-    const card = cards[i];
-    renderCard(card);
+    renderCard(cards[i]);
 }
 
 function getCurrentUser() {
