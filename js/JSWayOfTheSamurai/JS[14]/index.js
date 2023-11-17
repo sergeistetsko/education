@@ -71,3 +71,21 @@ showHelloMessage(notificationMessages);
 startTraining(words, result);
 showResult(result, words, settings, notificationMessages);
 
+// -------------- examples
+
+function printBrands() {
+    console.log('it-kamasutra');
+    document.write('it-incubator.io');
+}
+
+printBrands();
+
+console.log(1);
+document.write(2);
+
+printBrands();
+
+console.log(3);
+document.write(4);
+
+printBrands();
