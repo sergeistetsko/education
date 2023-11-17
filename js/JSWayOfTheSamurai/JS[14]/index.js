@@ -89,3 +89,20 @@ console.log(3);
 document.write(4);
 
 printBrands();
+
+// --------------------
+
+function getSum(a, b, c) {
+    const summa = a + b + c;
+    return summa;
+}
+function getGreetingMessage(name, name2) {
+    return "Hello, " + name + "! Welcome to " + name2;
+}
+
+const result2 = getSum(10, 20, 30);
+console.log(result2);
+
+const message = getGreetingMessage('Sergey', 'IT-INCUBATOR.IO');
+console.log(message);
+
