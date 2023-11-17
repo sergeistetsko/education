@@ -118,10 +118,10 @@ for (let i = 0; i < cards.length; i++) {
     let networkLogo = '';
     switch (card.networkType) {
         case 'visa':
-            networkLogo = '<img src="assets/images/visa_logo.png">';
+            networkLogo = '<img src="assets/images/visa_logo.png"><br>';
             break;
         case 'mastercard':
-            networkLogo = '<img src="assets/images/mastercard_logo.png">';
+            networkLogo = '<img src="assets/images/mastercard_logo.png"><br>';
             break;
     }
     document.write(networkLogo);
