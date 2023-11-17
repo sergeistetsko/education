@@ -93,10 +93,10 @@ printBrands();
 // --------------------
 
 function getSum(a, b, c) {
-    const summa = a + b + c;
-    return summa;
+    const sum = a + b + c;
+    return sum;
 }
-function getGreetingMessage(name, name2) {
+function getGreetingMessage(userName, companyName) {
     return "Hello, " + name + "! Welcome to " + name2;
 }
 
