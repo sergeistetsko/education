@@ -3,75 +3,11 @@ const currentUser = getCurrentUser();
 const cards = getCards();
 
 // render
-renderHeader();
-
+renderHeader(currentUser.name);
 
 for (let i = 0; i < cards.length; i++) {
-    // render card
-    let card = cards[i];
-
-    document.write("<div class='card-block'>");
-    document.write("<b>", card.type + " card", "</b>", "<br>");
-
-    let networkLogo = '';
-    switch (card.networkType) {
-        case "visa":
-            networkLogo = '<img src="visa_logo.png">';
-            break;
-        case "mastercard":
-            networkLogo = '<img src="mastercard_logo.png">';
-            break;
-    }
-
-    document.write(networkLogo);
-    document.write("<b>", "current balance", "</b>", "<br>");
-
-    let currencySign = "";
-
-    switch (card.currencyType) {
-        case "USD":
-            currencySign = "💵";
-            break;
-        case "EUR":
-            currencySign = "💶";
-            break;
-        case "GBP":
-            currencySign = "💷";
-            break;
-    }
-
-
-    document.write("<span>", currencySign + card.currentBalance, "</span>", "<br>");
-    document.write("<h4>", card.number, "</h4>");
-    document.write(
-        "<span>",
-        card.expirationMonth,
-        "/",
-        card.expirationYear,
-        "</span>"
-    );
-    document.write("<h2>", "History Transaction", "</h2>");
-    document.write("<ul>");
-
-    for (let j = 0; j < card.transactions.length; j++) {
-        let transaction = card.transactions[j];
-
-        document.write("<li>", transaction.title, ", ", transaction.date, ",");
-
-        // условный рендеринг
-        if (transaction.amount > 0) {
-            document.write('<span class="income">', transaction.amount, "</span>");
-        } else {
-            document.write('<span class="outcome">', transaction.amount, "</span>");
-        }
-
-        document.write("</li>");
-    }
-
-    document.write("</ul>");
-    document.write("</div>");
-
-    document.write("<hr>");
+    const card = cards[i];
+    renderCard(card);
 }
 
 function getCurrentUser() {
@@ -156,7 +92,72 @@ function getCards() {
     return cards;
 }
 
-function renderHeader() {
-    document.write("<h1>", "Hello, " + currentUser.name, "</h1>");
+function renderHeader(userName) {
+    document.write("<h1>", "Hello, " + userName.name, "</h1>");
     document.write("<h2>", "Cards: ", "</h2>");
+}
+
+function renderCard(card) {
+    document.write("<div class='card-block'>");
+    document.write("<b>", card.type + " card", "</b>", "<br>");
+
+    let networkLogo = '';
+    switch (card.networkType) {
+        case "visa":
+            networkLogo = '<img src="visa_logo.png">';
+            break;
+        case "mastercard":
+            networkLogo = '<img src="mastercard_logo.png">';
+            break;
+    }
+
+    document.write(networkLogo);
+    document.write("<b>", "current balance", "</b>", "<br>");
+
+    let currencySign = "";
+
+    switch (card.currencyType) {
+        case "USD":
+            currencySign = "💵";
+            break;
+        case "EUR":
+            currencySign = "💶";
+            break;
+        case "GBP":
+            currencySign = "💷";
+            break;
+    }
+
+
+    document.write("<span>", currencySign + card.currentBalance, "</span>", "<br>");
+    document.write("<h4>", card.number, "</h4>");
+    document.write(
+        "<span>",
+        card.expirationMonth,
+        "/",
+        card.expirationYear,
+        "</span>"
+    );
+    document.write("<h2>", "History Transaction", "</h2>");
+    document.write("<ul>");
+
+    for (let j = 0; j < card.transactions.length; j++) {
+        let transaction = card.transactions[j];
+
+        document.write("<li>", transaction.title, ", ", transaction.date, ",");
+
+        // условный рендеринг
+        if (transaction.amount > 0) {
+            document.write('<span class="income">', transaction.amount, "</span>");
+        } else {
+            document.write('<span class="outcome">', transaction.amount, "</span>");
+        }
+
+        document.write("</li>");
+    }
+
+    document.write("</ul>");
+    document.write("</div>");
+
+    document.write("<hr>");
 }
