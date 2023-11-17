@@ -97,7 +97,7 @@ function getSum(a, b, c) {
     return sum;
 }
 function getGreetingMessage(userName, companyName) {
-    return "Hello, " + name + "! Welcome to " + name2;
+    return "Hello, " + userName + "! Welcome to " + companyName;
 }
 
 const result2 = getSum(10, 20, 30);
