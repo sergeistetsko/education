@@ -221,7 +221,22 @@ for (let i = 0; i < cards.length; i++) {
     document.write('<b>', card.type + ' card', '</b>','<br>');
     document.write('<b>', card.networkType + ' card', '</b>','<br>');
     document.write('<b>', 'current balance', '</b>','<br>');
-    document.write('<span>', card.currentBalance, '</span>','<br>');
+
+    let currencySign = '';
+
+    switch (card.currencyType) {
+        case 'USD':
+            currencySign = '$';
+            break;
+        case 'EUR':
+            currencySign = '€';
+            break;
+        case 'GBP':
+            currencySign = '£';
+            break;
+    }
+    
+    document.write('<span>', currencySign + card.currentBalance, '</span>','<br>');
     document.write('<h4>', card.number, '</h4>');
     document.write('<span>',
         card.expirationMonth,
@@ -239,6 +254,7 @@ for (let i = 0; i < cards.length; i++) {
             ",",
             transaction.date,
             ",");
+        // условный рендеринг
         if (transaction.amount > 0) {
             document.write(
                 '<span class="income">',
