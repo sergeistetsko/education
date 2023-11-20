@@ -107,8 +107,7 @@ for (let day of sections.days) {
         </div>
         <div>
             ${exercise.images.map(src => `<img src="${src}">`).join('')}
-        </div>
-        `);
+        </div>`);
     }
     document.write(`</section>`);
 }
