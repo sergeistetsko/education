@@ -137,6 +137,10 @@ document.write('<b>lastName: </b>', student.info.lastName, '<br>');
 document.write('<b>country: </b>', student.address.country, '<br>');
 document.write('<b>city: </b>', student.address.city);*/
 
+let currentUser = {
+    name: 'Sergey'
+}
+
 let card1 = {
     type: 'debit',
     networkType: 'mastercard',
@@ -145,7 +149,19 @@ let card1 = {
     number: 5282345678901289,
     expirationYear: 2025,
     expirationMonth: 9,
-    isActive: true
+    isActive: true,
+    transactions: [
+        {
+            title: 'Order Revenue',
+            amount: -874,
+            date: new Date(2022, 3, 25, 16, 43, 22)
+        },
+        {
+            title: 'Order Revenue',
+            amount: 874,
+            date: new Date(2022, 3, 25, 16, 43, 22)
+        }
+    ]
 }
 let card2 = {
     type: 'credit',
@@ -155,30 +171,79 @@ let card2 = {
     number: 9232654321012032,
     expirationYear: 2026,
     expirationMonth: 4,
-    isActive: false
+    isActive: false,
+    transactions: [
+        {
+            title: 'Order Revenue',
+            amount: 874,
+            date: new Date(2022, 3, 25, 16, 43, 22)
+        },
+        {
+            title: 'Order Revenue',
+            amount: 874,
+            date: new Date(2022, 3, 25, 16, 43, 22)
+        }
+    ]
 }
+let card3 = {
+    type: 'debit',
+    networkType: 'mastercard',
+    currencyType: 'GBP',
+    currentBalance: 3263.65,
+    number: 554259349582930,
+    expirationYear: 2028,
+    expirationMonth: 3,
+    isActive: true,
+    transactions: [
+        {
+            title: 'Order Revenue',
+            amount: -874,
+            date: new Date(2022, 3, 25, 16, 43, 22)
+        },
+        {
+            title: 'Order Revenue',
+            amount: -874,
+            date: new Date(2022, 3, 25, 16, 43, 22)
+        }
+    ]
+}
+
+let cards = [card1, card2, card3];
 
 // render
 document.write('<h1>', 'Hello, ' + currentUser.name, '</h1>');
 document.write('<h2>', 'Cards: ', '</h2>');
 
-// render card 1
-document.write('<div>');
-document.write('<b>', card1.type + ' card', '</b>');
-document.write('<b>', card1.networkType + ' card', '</b>');
-document.write('<b>', 'current balance', '</b>');
-document.write('<span>', card1.currentBalance, '</span>');
-document.write('<h4>', card1.number, '</h4>');
-document.write('<span>', card1.expirationMonth, '/', card1.expirationYear, '</span>');
-document.write('</div>');
+for (let i = 0; i < cards.length; i++) {
+    let card = cards[i];
+    // render card
+    document.write('<div>');
+    document.write('<b>', card.type + ' card', '</b>','<br>');
+    document.write('<b>', card.networkType + ' card', '</b>','<br>');
+    document.write('<b>', 'current balance', '</b>','<br>');
+    document.write('<span>', card.currentBalance, '</span>','<br>');
+    document.write('<h4>', card.number, '</h4>');
+    document.write('<span>',
+        card.expirationMonth,
+        '/',
+        card.expirationYear,
+        '</span>');
+    document.write('<h2>', "History Transaction", '</h2>');
+    document.write('<ul>');
+    
+    for (let j = 0; j < card.transactions.length; j++) {
+        let transaction = card.transactions[j];
+        document.write('<li>',
+            transaction.title,
+            ',',
+            transaction.date,
+            ',',
+            transaction.amount,
+            '</li>');
+    }
+    document.write("</ul>");
+    document.write('</div>');
+    document.write('<hr>');
+}
 
-// render card 2
-document.write('<div>');
-document.write('<b>', card2.type + ' card', '</b>');
-document.write('<b>', card2.networkType + ' card', '</b>');
-document.write('<b>', 'current balance', '</b>');
-document.write('<span>', card2.currentBalance, '</span>');
-document.write('<h4>', card2.number, '</h4>');
-document.write('<span>', card2.expirationMonth, '/', card2.expirationYear, '</span>');
-document.write('</div>');
 
