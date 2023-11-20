@@ -110,7 +110,7 @@ for (let i = 0; i < cards.length; i++) {
     document.write("<hr>");
 }*/
 
-// data
+/*// data
 
 let name = 'it-incubator';
 let graduatesCount = 2000;
@@ -135,5 +135,50 @@ let student = {
 document.write('<br>', '<b>firstName: </b>', student.info.firstName, '<br>');
 document.write('<b>lastName: </b>', student.info.lastName, '<br>');
 document.write('<b>country: </b>', student.address.country, '<br>');
-document.write('<b>city: </b>', student.address.city);
+document.write('<b>city: </b>', student.address.city);*/
+
+let card1 = {
+    type: 'debit',
+    networkType: 'mastercard',
+    currencyType: 'USD',
+    currentBalance: 5750.53,
+    number: 5282345678901289,
+    expirationYear: 2025,
+    expirationMonth: 9,
+    isActive: true
+}
+let card2 = {
+    type: 'credit',
+    networkType: 'visa',
+    currencyType: 'EUR',
+    currentBalance: 1343.53,
+    number: 9232654321012032,
+    expirationYear: 2026,
+    expirationMonth: 4,
+    isActive: false
+}
+
+// render
+document.write('<h1>', 'Hello, ' + currentUser.name, '</h1>');
+document.write('<h2>', 'Cards: ', '</h2>');
+
+// render card 1
+document.write('<div>');
+document.write('<b>', card1.type + ' card', '</b>');
+document.write('<b>', card1.networkType + ' card', '</b>');
+document.write('<b>', 'current balance', '</b>');
+document.write('<span>', card1.currentBalance, '</span>');
+document.write('<h4>', card1.number, '</h4>');
+document.write('<span>', card1.expirationMonth, '/', card1.expirationYear, '</span>');
+document.write('</div>');
+
+// render card 2
+document.write('<div>');
+document.write('<b>', card2.type + ' card', '</b>');
+document.write('<b>', card2.networkType + ' card', '</b>');
+document.write('<b>', 'current balance', '</b>');
+document.write('<span>', card2.currentBalance, '</span>');
+document.write('<h4>', card2.number, '</h4>');
+document.write('<span>', card2.expirationMonth, '/', card2.expirationYear, '</span>');
+document.write('</div>');
 
