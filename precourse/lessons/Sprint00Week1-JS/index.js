@@ -1,3 +1,4 @@
+/*
 document.write("<h1>", "My Cards", "</h1>");
 
 let card1 = {
@@ -107,4 +108,16 @@ for (let i = 0; i < cards.length; i++) {
     document.write("</ul>");
     document.write('</div>');
     document.write("<hr>");
-}
+}*/
+
+// data
+
+let name = 'it-incubator';
+let graduatesCount = 2000;
+let areYouChampion = true;
+
+//ui program, render
+
+document.write('<h1>', name, '</h1>');
+document.write(`<input type="number" value="${graduatesCount}">`);
+document.write(`<input type="checkbox"${areYouChampion ? ' checked ' : ''}>`);
