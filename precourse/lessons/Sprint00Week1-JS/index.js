@@ -276,9 +276,9 @@ for (let i = 0; i < cards.length; i++) {
                 transaction.amount,
                 '</span>');
         }
-        document.write("</li>");
+        document.write('</li>');
     }
-    document.write("</ul>");
+    document.write('</ul>');
     document.write('</div>');
     document.write('<hr>');
 }
