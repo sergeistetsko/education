@@ -233,13 +233,24 @@ for (let i = 0; i < cards.length; i++) {
     
     for (let j = 0; j < card.transactions.length; j++) {
         let transaction = card.transactions[j];
-        document.write('<li>',
+        document.write(
+            "<li>",
             transaction.title,
-            ',',
+            ",",
             transaction.date,
-            ',',
-            transaction.amount,
-            '</li>');
+            ",");
+        if (transaction.amount > 0) {
+            document.write(
+                '<span class="income">',
+                transaction.amount,
+                '</span>');
+        } else {
+            document.write(
+                '<span class="outcome">',
+                transaction.amount,
+                '</span>');
+        }
+        document.write("</li>");
     }
     document.write("</ul>");
     document.write('</div>');
