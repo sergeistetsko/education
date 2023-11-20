@@ -120,4 +120,20 @@ let areYouChampion = true;
 
 document.write('<h1>', name, '</h1>');
 document.write(`<input type="number" value="${graduatesCount}">`);
-document.write(`<input type="checkbox"${areYouChampion ? ' checked ' : ''}>`);
+document.write(`<input type="checkbox"${areYouChampion ? ' checked ' : ''}><br>`);
+
+let student = {
+    info: {
+        firstName: 'Ivan',
+        lastName: 'Ivanov'
+    },
+    address: {
+        country: 'France',
+        city: 'Paris'
+    }
+}
+document.write('<br>', '<b>firstName: </b>', student.info.firstName, '<br>');
+document.write('<b>lastName: </b>', student.info.lastName, '<br>');
+document.write('<b>country: </b>', student.address.country, '<br>');
+document.write('<b>city: </b>', student.address.city);
+
