@@ -1,11 +1,11 @@
 // data
 const currentUser = getCurrentUser();
 const cards = getCards();
+
 // render
 renderHeader(currentUser.name);
-for (let i = 0; i < cards.length; i++) {
-    renderCard(cards[i]);
-}
+renderCards(cards);
+
 // functions
 function getCurrentUser() {
     let newUser = {
@@ -90,7 +90,13 @@ function getCards() {
 }
 function renderHeader(userName) {
     document.write("<h1>", "Hello, " + userName, "</h1>");
+}
+function renderCards(cards) {
     document.write("<h2>", "Cards: ", "</h2>");
+
+    for (let i = 0; i < cards.length; i++) {
+        renderCard(cards[i]);
+    }
 }
 function renderCard(card) {
     document.write("<div class='card-block'>");
