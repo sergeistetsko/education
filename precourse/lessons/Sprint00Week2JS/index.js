@@ -1,8 +1,6 @@
-// data
 const currentUser = getCurrentUser();
 const cards = getCards();
 
-// render
 renderHeader(currentUser.name);
 renderCards(cards);
 
@@ -95,7 +93,10 @@ function renderCards(cards) {
     document.write("<h2>", "Cards: ", "</h2>");
 
     for (let i = 0; i < cards.length; i++) {
+        document.write('<div>');
         renderCard(cards[i]);
+        renderCardTransactions(cards[i].transactions);
+        document.write('</div>');
     }
 }
 function renderCard(card) {
@@ -137,11 +138,13 @@ function renderCard(card) {
         card.expirationYear,
         "</span>"
     );
+}
+function renderCardTransactions(transactions) {
     document.write("<h2>", "History Transaction", "</h2>");
     document.write("<ul>");
 
-    for (let j = 0; j < card.transactions.length; j++) {
-        let transaction = card.transactions[j];
+    for (let j = 0; j < transactions.length; j++) {
+        let transaction = transactions[j];
 
         document.write("<li>", transaction.title, ", ", transaction.date, ",");
 
@@ -160,3 +163,5 @@ function renderCard(card) {
 
     document.write("<hr>");
 }
+
+
