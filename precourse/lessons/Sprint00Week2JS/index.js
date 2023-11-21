@@ -7,6 +7,7 @@ renderHeader(currentUser.name);
 renderCards(cards);
 
 // functions
+
 function getCurrentUser() {
     let newUser = {
         name: 'Alex',
@@ -97,17 +98,34 @@ function renderCards(cards) {
     document.write("<h2>", "Cards: ", "</h2>");
 
     for (let i = 0; i < cards.length; i++) {
-        document.write('<div>');
-        renderCard(cards[i]);
-        renderCardTransactions(cards[i].transactions);
-        document.write('</div>');
+        const divElement = document.createElement('<div>');
+        
+        const cardElement = createCardElement(cards[i]);
+        
+        divElement.appendChild(cardElement);
+        
+        const transactionsElement = createCardTransactionsElement(cards[i].transactions);
+        divElement.appendChild(transactionsElement);
+        
+        rootElement.appendChild(divElement);
     }
 }
-function renderCard(card) {
-    document.write("<div class='card-block'>");
-    document.write("<b>", card.type + " card", "</b>", "<br>");
+function createCardElement(card) {
+    const cardElement = document.createElement('div');
+    cardElement.className.add = ('card-block');
+    
+    const cardTypeElement =  document.createElement('b');
+    cardTypeElement.innerText = card.type + " card";
+    
+    cardElement.appendChild(cardTypeElement);
+    
+    const br1 = document.createElement('br');
 
-    let networkLogo = '';
+    cardElement.appendChild(br1);
+    
+    return cardElement;
+    
+    /*let networkLogo = '';
     switch (card.networkType) {
         case "visa":
             networkLogo = '<img src="visa_logo.png">';
@@ -141,30 +159,70 @@ function renderCard(card) {
         "/",
         card.expirationYear,
         "</span>"
-    );
+    );*/
 }
-function renderCardTransactions(transactions) {
-    document.write("<h2>", "History Transaction", "</h2>");
-    document.write("<ul>");
+function createCardTransactionsElement(transactions) {
+    
+    const ulElement = document.createElement('ul');
+    
+    /*document.write("<h2>", "History Transaction", "</h2>");
+    document.write("<ul>");*/
 
     for (let j = 0; j < transactions.length; j++) {
-        renderTransaction(transactions[j])
+        const transactionElement = createTransactionElement(transactions[j])
+        ulElement.appendChild(transactionElement);
     }
-    document.write("</ul>");
+    
+    return ulElement;
+   /* document.write("</ul>");
     document.write("</div>");
 
-    document.write("<hr>");
+    document.write("<hr>");*/
 }
-function renderTransaction(transaction) {
-    document.write("<li>", transaction.title, ", ", transaction.date, ",");
+function createTransactionElement(transaction) {
+    
+    const transactionElement = document.createElement('li');
+    transactionElement.innerText = transaction.title + ", " + transaction.date;
+    return transactionElement;
+/*    document.write("<li>", transaction.title, ", ", transaction.date, ",");*/
 
     // условный рендеринг
-    if (transaction.amount > 0) {
+   /* if (transaction.amount > 0) {
         document.write('<span class="income">', transaction.amount, "</span>");
     } else {
         document.write('<span class="outcome">', transaction.amount, "</span>");
     }
 
-    document.write("</li>");
+    document.write("</li>");*/
 }
+
+// simple example
+
+const root = document.querySelector('#root');
+
+const h1 = document.createElement('h1');
+h1.innerText = 'hello';
+
+const img = document.createElement('img');
+img.src = 'https://www.google.by/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png';
+
+const ul = document.createElement('ul');
+const li1 = document.createElement('li');
+li1.innerText = 'JS';
+const li2 = document.createElement('li');
+li2.innerText = 'CSS';
+
+ul.appendChild(li1);
+ul.appendChild(li2);
+
+const hr = document.createElement('hr');
+
+root.appendChild(img);
+root.appendChild(h1);
+root.appendChild(ul);
+root.appendChild(hr);
+
+
+
+
 
