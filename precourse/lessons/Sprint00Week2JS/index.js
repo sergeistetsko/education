@@ -93,15 +93,16 @@ function renderHeader(userName) {
     const h1Element = document.createElement('h1');
     h1Element.innerText = `Hello, ${userName}`;
     rootElement.appendChild(h1Element);
+    
+    const h2Element = document.createElement('h2');
+    h1Element.innerText = "Cards: ";
+    rootElement.appendChild(h2Element);
 }
 function renderCards(cards) {
-    document.write("<h2>", "Cards: ", "</h2>");
-
     for (let i = 0; i < cards.length; i++) {
-        const divElement = document.createElement('<div>');
+        const divElement = document.createElement('div');
         
         const cardElement = createCardElement(cards[i]);
-        
         divElement.appendChild(cardElement);
         
         const transactionsElement = createCardTransactionsElement(cards[i].transactions);
@@ -112,7 +113,7 @@ function renderCards(cards) {
 }
 function createCardElement(card) {
     const cardElement = document.createElement('div');
-    cardElement.className.add = ('card-block');
+    cardElement.classList.add('card-block');
     
     const cardTypeElement =  document.createElement('b');
     cardTypeElement.innerText = card.type + " card";
@@ -197,7 +198,7 @@ function createTransactionElement(transaction) {
 }
 
 // simple example
-
+/*
 const root = document.querySelector('#root');
 
 const h1 = document.createElement('h1');
@@ -221,6 +222,7 @@ root.appendChild(img);
 root.appendChild(h1);
 root.appendChild(ul);
 root.appendChild(hr);
+*/
 
 
 
