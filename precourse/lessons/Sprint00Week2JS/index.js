@@ -113,7 +113,7 @@ function renderCard(card) {
     }
 
     document.write(networkLogo);
-    document.write("<b>", "current balance", "</b>", "<br>");
+    document.write("<br>", "<b>", "current balance", "</b>", "<br>");
 
     let currencySign = "";
 
