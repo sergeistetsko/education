@@ -1,6 +1,8 @@
 const currentUser = getCurrentUser();
 const cards = getCards();
 
+const rootElement = document.querySelector('#root');
+
 renderHeader(currentUser.name);
 renderCards(cards);
 
@@ -87,7 +89,9 @@ function getCards() {
     return cards;
 }
 function renderHeader(userName) {
-    document.write("<h1>", "Hello, " + userName, "</h1>");
+    const h1Element = document.createElement('h1');
+    h1Element.innerText = `Hello, ${userName}`;
+    rootElement.appendChild(h1Element);
 }
 function renderCards(cards) {
     document.write("<h2>", "Cards: ", "</h2>");
