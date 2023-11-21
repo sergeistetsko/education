@@ -13,7 +13,6 @@ function getCurrentUser() {
   };
   return newUser;
 }
-
 function getCards() {
   let card1 = {
     type: "debit",
@@ -89,17 +88,14 @@ function getCards() {
 
   return cards;
 }
-
 function renderHeader(userName, userBalance) {
   const h1Element = document.createElement('h1');
   h1Element.innerText = `Hello, ${userName}, balance: ${userBalance}`
   rootElement.appendChild(h1Element);
 }
-
 function renderCards(cards) {
   renderCardsHeader();
-
-  for (let i = 0; i < cards.length; i++) {
+    for (let i = 0; i < cards.length; i++) {
     const divElement = document.createElement('div');
    
     const cardElement = createCardElement(cards[i]);
@@ -113,11 +109,9 @@ function renderCards(cards) {
     
   }
 }
-
 function renderCardsHeader() {
   document.write("<h2>", "Cards: ", "</h2>");
 }
-
 function createCardElement(card) {
   const cardElement = document.createElement('div');
   cardElement.classList.add('card-block');
@@ -180,7 +174,6 @@ function createCardElement(card) {
   cardElement.appendChild(expirationDateElement);
   return cardElement;
 }
-
 function createCardTransactionsElement(transactions) {
   let historyTransactionsContainer = document.createElement('div');
   
@@ -201,7 +194,6 @@ function createCardTransactionsElement(transactions) {
 
   return historyTransactionsContainer;
 }
-
 function createTransactionElement(transaction) {
   const transactionElement = document.createElement('li');
   transactionElement.innerText = transaction.title + ", " + transaction.date;
