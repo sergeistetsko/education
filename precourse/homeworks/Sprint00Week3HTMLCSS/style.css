@@ -17,6 +17,9 @@ body {
 a {
     text-decoration: none;
 }
+a:hover {
+    text-decoration: underline;
+}
 
 ul {
     list-style: none;
@@ -25,8 +28,12 @@ ul {
 button {
     border: none;
     background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s;
 }
-
+button:hover {
+    transform: translateY(-5px);
+}
 .title {
     color: #363940;
     font-size: 32px;
@@ -40,7 +47,9 @@ button {
     font-weight: 400;
     line-height: 22px;
 }
-
+input[type="radio"], input[type="checkbox"], input[type="date"], select {
+    cursor: pointer;
+}
 /* ================ Стили для Хедера ================ */
 
 .header {
