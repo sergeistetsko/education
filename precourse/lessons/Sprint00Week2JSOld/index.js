@@ -1,3 +1,4 @@
+// examples
 function showMe() {
     console.log("Hellow!");
 }
@@ -51,6 +52,27 @@ function giveMeResult(dayOfWeek) {
             console.log("Некорректное значение дня недели");
     }
 }
+// examples
+let prof = 'proger';
+let age = 18
+
+
+if (prof === 'proger' || age !== 18) {
+    console.log('Success!');
+}
+if (prof === 'proger' && age !== 18) {
+    console.log('Success!');
+}
+
+// Задание 3
+const isInRange = (num) => {
+    if ((num >= 10 && num <= 20) || num === 0 || num === 100) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
 
 
 
