@@ -19,6 +19,9 @@ ul {
 section {
     background: #eff2f9;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -27,18 +30,34 @@ section {
     background: #fff;
     box-shadow: 20px 20px 40px 0 rgba(81, 91, 117, 0.25);
     padding: 60px 0 70px;
+    display: flex;
 }
 
 /* =================== Cтили для левой части =================== */
 
 .product-image-block {
     border-right: 2px solid rgba(20, 20, 20, 0.15);
-    width: 540px;
+    min-width: 540px;
+    display: flex;
+    flex-direction: column;
 }
-
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.preview-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
 .preview {
     width: 80px;
     height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .preview.selected {
@@ -76,12 +95,24 @@ section {
     line-height: 30px; /* 166.667% */
     letter-spacing: 0.18px;
     margin-bottom: 65px;
+    margin-top: 60px;
 }
 
 .colors {
     margin-bottom: 65px;
-}
 
+}
+.colors > ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.wrapper {
+    display: flex;
+}
+.wrapper >  div {
+    flex-grow: 1;
+}
 .title {
     color: rgba(20, 20, 20, 0.40);
     font-family: Lato, sans-serif;
