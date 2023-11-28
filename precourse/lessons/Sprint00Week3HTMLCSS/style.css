@@ -58,8 +58,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.2s;
+    cursor: pointer;
 }
 
+.preview:hover,
 .preview.selected {
     box-shadow: 8px 8px 16px 0 rgba(81, 91, 117, 0.25);
 }
@@ -128,6 +131,7 @@ section {
     height: 16px;
     filter: drop-shadow(2px 2px 4px rgba(81, 91, 117, 0.25));
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .blue {
@@ -146,12 +150,17 @@ section {
     background-color: #F2C723;
 }
 
-li.selected {
+.colors ul li {
     width: 30px;
     height: 30px;
     padding: 7px;
-    box-shadow: 2px 2px 6px 0 rgba(81, 91, 117, 0.25);
     border-radius: 50%;
+    transition: 0.2s;
+}
+
+.colors ul li.selected,
+.colors ul li:hover {
+    box-shadow: 2px 2px 6px 0 rgba(81, 91, 117, 0.25);
 }
 
 .quantity {
@@ -164,6 +173,7 @@ li.selected {
     background-image: url("./assets/images/arrow-bottom.svg");
     background-repeat: no-repeat;
     background-position: right 0 top 50%;
+    font-family: Rubik, sans-serif;
 }
 
 .price {
@@ -183,4 +193,9 @@ li.selected {
     font-weight: 500;
     letter-spacing: 0.18px;
     margin-top: 75px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.btn:hover {
+    transform: translateY(-5px);
 }
