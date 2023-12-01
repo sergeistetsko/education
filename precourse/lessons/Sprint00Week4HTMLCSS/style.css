@@ -15,14 +15,14 @@ body {
 }
 section {
     background: #EFF2F9;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .card {
     width: 1170px;
-    height: 800px;
+    min-height: 800px;
     background: #FFF;
     box-shadow: 20px 20px 40px 0 rgba(81, 91, 117, 0.25);
     padding: 60px 0 70px;
@@ -186,4 +186,47 @@ section {
 }
 .btn:hover {
     transform: translateY(-5px);
+}
+/* Медиа-запросы */
+@media screen and (max-width: 1440px) {
+    .card {
+        flex-direction: column;
+        margin: 40px;
+    }
+    .product-image-block {
+        border-right: none;
+        border-bottom: 2px solid rgba(20, 20, 20, 0.15);
+        padding-bottom: 70px;
+    }
+    .previews-wrapper {
+        margin-top: 60px;
+    }
+    .product-info-block {
+        padding-top: 60px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .card {
+        margin: 20px 15px 35px;
+        padding: 60px 0 60px;
+    }
+    .main-image {
+        width: 250px;
+    }
+    .main-title {
+        font-size: 34px;
+    }
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+    .text {
+        font-size: 16px;
+    }
+    .product-info-block {
+        padding: 60px 20px 0;
+    }
+    .product-image-block {
+        min-width: 100%;
+    }
 }
