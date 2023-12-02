@@ -1,13 +1,13 @@
 export function getCurrentUser() {
     let newUser = {
-      name: "Alex",
-      role: "Admin",
-      balance: 100,
+        name: "Alex",
+        role: "Admin",
+        balance: 100,
     };
     return newUser;
-  }
-  
-  let card1 = {
+}
+
+let card1 = {
     id: 1,
     type: "debit",
     networkType: "mastercard",
@@ -18,20 +18,20 @@ export function getCurrentUser() {
     expirationMonth: 9,
     isActive: true,
     transactions: [
-      {
-        title: "Order Revenue",
-        amount: 874,
-        date: new Date(2022, 3, 25, 16, 43, 22), // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
-      },
-      {
-        title: "Order Revenue",
-        amount: -874,
-        date: new Date(2022, 3, 25, 16, 43, 22), // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
-      },
+        {
+            title: "Order Revenue",
+            amount: 874,
+            date: new Date(2022, 3, 25, 16, 43, 22), // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
+        },
+        {
+            title: "Order Revenue",
+            amount: -874,
+            date: new Date(2022, 3, 25, 16, 43, 22), // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
+        },
     ],
-  };
+};
 
-  let card2 = {
+let card2 = {
     id: 2,
     type: "credit",
     networkType: "visa",
@@ -42,20 +42,20 @@ export function getCurrentUser() {
     expirationMonth: 4,
     isActive: false,
     transactions: [
-      {
-        title: "Order Revenue",
-        amount: -874,
-        date: new Date(2022, 3, 25, 16, 43, 22), // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
-      },
-      {
-        title: "Order Revenue",
-        amount: -874,
-        date: new Date(2022, 3, 25, 16, 43, 22), // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
-      },
+        {
+            title: "Order Revenue",
+            amount: -874,
+            date: new Date(2022, 3, 25, 16, 43, 22), // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
+        },
+        {
+            title: "Order Revenue",
+            amount: -874,
+            date: new Date(2022, 3, 25, 16, 43, 22), // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
+        },
     ],
-  };
+};
 
-  let card3 = {
+let card3 = {
     id: 3,
     type: "debit",
     networkType: "mastercard",
@@ -67,53 +67,54 @@ export function getCurrentUser() {
     isActive: true,
     //.. all existing properties
     transactions: [
-      {
-        title: "Order Revenue",
-        amount: 874,
-        date: new Date(2022, 3, 25, 16, 43, 22), // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
-      },
-      {
-        title: "Order Revenue",
-        amount: 874,
-        date: new Date(2022, 3, 25, 16, 43, 22), // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
-      },
+        {
+            title: "Order Revenue",
+            amount: 874,
+            date: new Date(2022, 3, 25, 16, 43, 22), // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
+        },
+        {
+            title: "Order Revenue",
+            amount: 874,
+            date: new Date(2022, 3, 25, 16, 43, 22), // Месяцы в JavaScript начинаются с 0, поэтому 3 - это апрель.
+        },
     ],
-  };
+};
 
-  let cards = [card1, card2, card3];
+let cards = [card1, card2, card3];
 
-let dataChangedEventListener = function () {}
-
-
-export function addEventListener(listener) {
-  dataChangedEventListener = listener;
+let dataChangedEventListener = function () {
 }
 
 
- export function getCards() {
-    return cards;
-  }
+export function addEventListener(listener) {
+    dataChangedEventListener = listener;
+}
 
-  export function createCard(cardNumber, newCardType) {
+
+export function getCards() {
+    return cards;
+}
+
+export function createCard(cardNumber, newCardType) {
     let newCard = {
-      id: Number(new Date()),
-      type: "debit",
-      networkType: newCardType,
-      currencyType: "USD",
-      currentBalance: 0,
-      number: cardNumber,
-      expirationYear: 0,
-      expirationMonth: 0,
-      isActive: false,
-      transactions: [],
+        id: Number(new Date()),
+        type: "debit",
+        networkType: newCardType,
+        currencyType: "USD",
+        currentBalance: 0,
+        number: cardNumber,
+        expirationYear: 0,
+        expirationMonth: 0,
+        isActive: false,
+        transactions: [],
     };
     cards.unshift(newCard);
     dataChangedEventListener();
-  }
+}
 
-  export function updateCard(id, newCardNumber, newCardType) {
-      const card = cards.find(card => card.id === id);
-      card.number = newCardNumber;
-      card.networkType = newCardType;
-      dataChangedEventListener();
-  }
+export function updateCard(id, newCardNumber, newCardType) {
+    const card = cards.find(card => card.id === id);
+    card.number = newCardNumber;
+    card.networkType = newCardType;
+    dataChangedEventListener();
+}
