@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab206008-39b5-433a-b94e-ef899b2d045f" name="Changes" comment="add step 0">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mastercard_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/card.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/transactions/transactions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/CardNetworkSelect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/CardCreationDialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dialogs/CardEditingDialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visa_logo.png" beforeDir="false" />
+    <list default="true" id="ab206008-39b5-433a-b94e-ef899b2d045f" name="Changes" comment="add playlist">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +25,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/myEducation/myProjects/myEducation/precourse/lessons/Sprint00Week4JS",
+    "last_opened_file_path": "D:/myEducation/myProjects/myEducation/HTMLCSS/HeadFirst",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,7 +42,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701514046023</updated>
-      <workItem from="1701514047099" duration="1733000" />
+      <workItem from="1701514047099" duration="2866000" />
+      <workItem from="1701520195124" duration="664000" />
     </task>
     <task id="LOCAL-00001" summary="add step 0">
       <created>1701514088919</created>
@@ -62,7 +52,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701514088919</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add playlist">
+      <created>1701516817688</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701516817688</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -70,6 +67,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add step 0" />
-    <option name="LAST_COMMIT_MESSAGE" value="add step 0" />
+    <MESSAGE value="add playlist" />
+    <option name="LAST_COMMIT_MESSAGE" value="add playlist" />
   </component>
 </project>
