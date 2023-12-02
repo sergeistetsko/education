@@ -1,15 +1,28 @@
-import {getCurrentUser, getCards} from './data.js'
+import {getCurrentUser, getCards, addEventListener} from './data.js'
 import {renderHeader} from './components/header.js'
-import {renderCards} from './components/cards/card.js'
+import {Cards} from './components/cards/card.js'
 
-const currentUser = getCurrentUser();
-const cards = getCards();
 
-const rootElement = document.querySelector('#root');
+// addEventListener(renderApp);
+addEventListener(renderApp);
 
-const headerElement = renderHeader(currentUser.name, currentUser.balance);
-rootElement.appendChild(headerElement);
+function logData() {
+  console.log('DATA CHANGED');
+  console.log(getCards());
+}
 
-const cardsElement = renderCards(cards);
-rootElement.appendChild(cardsElement);
+export function renderApp() {
+  const currentUser = getCurrentUser();
+  const cards = getCards();
+  
+  const rootElement = document.querySelector('#root');
+  rootElement.innerHTML = '';
+  
+  const headerElement = renderHeader(currentUser.name, currentUser.balance);
+  rootElement.appendChild(headerElement);
+  
+  const cardsElement = Cards(cards, renderApp);
+  rootElement.appendChild(cardsElement);
+}
 
+renderApp();

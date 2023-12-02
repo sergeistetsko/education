@@ -1,96 +1,117 @@
-import {createCardTransactionsElement} from "./transactions/transactions.js"
-export function renderCards(cards) {
-    const cardContainerElement = document.createElement('div');
-    const headerElement = renderCardsHeader();
-    cardContainerElement.appendChild(headerElement);
+import { createCardTransactionsElement } from "./transactions/transactions.js";
+import { CardCreationDialog } from "../dialogs/CardCreationDialog.js";
+import { CardEditingDialog } from "../dialogs/CardEditingDialog.js";
 
-    for (let i = 0; i < cards.length; i++) {
-        const divElement = document.createElement('div');
+export function Cards(cards, anyCallback) {
+  const cardContainerElement = document.createElement("div");
+  const headerElement = CardsHeader(anyCallback);
+  cardContainerElement.appendChild(headerElement);
 
-        const cardElement = createCardElement(cards[i]);
+  for (let i = 0; i < cards.length; i++) {
+    const divElement = document.createElement("div");
 
-        divElement.appendChild(cardElement);
+    const cardElement = CardElement(cards[i]);
 
-        const transactionsElement = createCardTransactionsElement(cards[i].transactions);
-        divElement.appendChild(transactionsElement);
+    divElement.appendChild(cardElement);
 
-        cardContainerElement.appendChild(divElement);
-    }
-    return cardContainerElement;
+    const transactionsElement = createCardTransactionsElement(
+      cards[i].transactions
+    );
+    divElement.appendChild(transactionsElement);
+
+    cardContainerElement.appendChild(divElement);
+  }
+  return cardContainerElement;
 }
-function renderCardsHeader() {
-    const el = document.createElement('h2');
-    el.innerText = 'Cards:';
 
-    const createCardButton = document.createElement('button');
-    createCardButton.innerText = 'create card';
-    createCardButton.addEventListener('click', function () {
-        alert('card created');
-    });
+function CardsHeader(anyCallback) {
+  const el = document.createElement("div");
+  el.innerText = "Cards:";
 
-    el.appendChild(createCardButton);
+  const dialogElement = CardCreationDialog();
+  el.appendChild(dialogElement);
 
-    return el;
+  const createCardButton = document.createElement("button");
+  createCardButton.innerText = "create card";
+  createCardButton.addEventListener("click", function () {
+    dialogElement.open = true;
+  });
+
+  el.appendChild(createCardButton);
+
+  return el;
 }
-function createCardElement(card) {
-    const cardElement = document.createElement('div');
-    cardElement.classList.add('card-block');
 
-    const cardTypeElement = document.createElement('b');
-    cardTypeElement.innerText = card.type + " card";
+function CardElement(card) {
+  const cardElement = document.createElement("div");
+  cardElement.classList.add("card-block");
 
-    cardElement.appendChild(cardTypeElement);
+  const cardTypeElement = document.createElement("b");
+  cardTypeElement.innerText = card.type + " card";
 
-    const br1 = document.createElement('br');
+  cardElement.appendChild(cardTypeElement);
 
-    cardElement.appendChild(br1);
+  const editCardDialogElement = CardEditingDialog(card);
+  cardElement.appendChild(editCardDialogElement);
 
-    let networkLogo = document.createElement('img');
-    switch (card.networkType) {
-        case "visa":
-            networkLogo.src = "visa_logo.png";
-            break;
-        case "mastercard":
-            networkLogo.src = "mastercard_logo.png";
-            break;
-    }
+  const showEditDialogButton = document.createElement("button");
+  showEditDialogButton.innerText = "edit";
+  showEditDialogButton.addEventListener("click", function () {
+    editCardDialogElement.open = true;
+  });
+  cardElement.appendChild(showEditDialogButton);
 
-    cardElement.appendChild(networkLogo)
+  const br1 = document.createElement("br");
 
-    cardElement.appendChild(document.createElement('br'));
+  cardElement.appendChild(br1);
 
+  let networkLogo = document.createElement("img");
+  switch (card.networkType) {
+    case "visa":
+      networkLogo.src = "visa_logo.png";
+      break;
+    case "mastercard":
+      networkLogo.src = "mastercard_logo.png";
+      break;
+  }
 
-    let currentBalance = document.createElement('b');
-    currentBalance.innerText = 'current balance:';
-    cardElement.appendChild(currentBalance)
+  cardElement.appendChild(networkLogo);
 
+  cardElement.appendChild(document.createElement("br"));
 
-    let currencySign = "";
+  let currentBalance = document.createElement("b");
+  currentBalance.innerText = "current balance:";
+  cardElement.appendChild(currentBalance);
 
-    switch (card.currencyType) {
-        case "USD":
-            currencySign = "💵";
-            break;
-        case "EUR":
-            currencySign = "💶";
-            break;
-        case "GBP":
-            currencySign = "💷";
-            break;
-    }
+  let currencySign = "";
 
-    let currentBalanceValueElement = document.createElement('span');
-    currentBalanceValueElement.innerText = currencySign + card.currentBalance;
-    cardElement.appendChild(currentBalanceValueElement)
+  switch (card.currencyType) {
+    case "USD":
+      currencySign = "💵";
+      break;
+    case "EUR":
+      currencySign = "💶";
+      break;
+    case "GBP":
+      currencySign = "💷";
+      break;
+  }
 
-    cardElement.appendChild(document.createElement('br'));
+  let currentBalanceValueElement = document.createElement("span");
+  currentBalanceValueElement.innerText = currencySign + card.currentBalance;
+  cardElement.appendChild(currentBalanceValueElement);
 
-    let cardNumberElement = document.createElement('h4');
-    cardNumberElement.innerText = card.number;
-    cardElement.appendChild(cardNumberElement);
+  cardElement.appendChild(document.createElement("br"));
 
-    let expirationDateElement = document.createElement('span');
-    expirationDateElement.innerText = card.expirationMonth + '/' + card.expirationYear;
-    cardElement.appendChild(expirationDateElement);
-    return cardElement;
+  let cardNumberElement = document.createElement("h4");
+  cardNumberElement.innerText = card.number;
+  cardElement.appendChild(cardNumberElement);
+
+  let expirationDateElement = document.createElement("span");
+  expirationDateElement.innerText =
+    card.expirationMonth + "/" + card.expirationYear;
+  cardElement.appendChild(expirationDateElement);
+  return cardElement;
 }
+
+
