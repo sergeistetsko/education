@@ -1,4 +1,5 @@
-/*let grade1 = 5;
+/*
+let grade1 = 5;
 let grade2 = 6;
 let grade3 = 7;
 let grade4 = 8;
@@ -25,7 +26,6 @@ console.log(books[1]);*/
 
 /*let answers = [true, false, true, true];
 console.log(answers[1]);*/
-
 /*
 
 let persons = [

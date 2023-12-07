@@ -1,5 +1,4 @@
 // ------------ functions
-
 function showHelloMessage(_notificationMessages) {
     alert(_notificationMessages.start.hello);
 }
@@ -24,9 +23,7 @@ function showResult(_result, _words, _settings, _notificationMessages) {
         alert(_notificationMessages.result.finishUnsucces);
     }
 }
-
 // ------------ data
-
 const words = [
     {
         original: 'Wassup',
@@ -64,20 +61,15 @@ const settings = {
 const result = {
     correctAnswersCount: 0
 }
-
 // ------------- main
-
 showHelloMessage(notificationMessages);
 startTraining(words, result);
 showResult(result, words, settings, notificationMessages);
-
 // -------------- examples
-
 function printBrands() {
     console.log('it-kamasutra');
     document.write('it-incubator.io');
 }
-
 printBrands();
 
 console.log(1);
@@ -89,12 +81,9 @@ console.log(3);
 document.write(4);
 
 printBrands();
-
 // --------------------
-
 function getSum(a, b, c) {
-    const sum = a + b + c;
-    return sum;
+    return a + b + c;
 }
 function getGreetingMessage(userName, companyName) {
     return "Hello, " + userName + "! Welcome to " + companyName;

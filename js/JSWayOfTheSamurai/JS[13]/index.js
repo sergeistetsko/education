@@ -1,4 +1,5 @@
-/*//исходные данные
+/*
+//исходные данные
 const repeatCount = 0;
 
 //инициализация стартового значения
@@ -33,19 +34,23 @@ if (index <= repeatCount) {
 index = 7;
 if (index <= repeatCount) {
     document.write('a');
-}*/
-
-/*let repeatCount = 15;
+}
+*/
+/*
+let repeatCount = 15;
 
 for (let index = 0; index <= repeatCount; index++) {
     document.write('a');
-}*/
+}
+*/
 
-/*let grades = [5,4,3];
+/*
+let grades = [5,4,3];
 
 for (let i = 0; i < grades.length; i++) {
     document.write(grades[i], '<br>')
-}*/
+}
+*/
 /*
 let shoppingLists = [
     ['молоко', 'xлеб', 'яйца'],
@@ -59,7 +64,8 @@ for (let i = 0; i < shoppingLists.length; i++) {
         document.write(j + 1, ' - ', shoppingLists[i][j], '<br>')
     }
     document.write('<br>')
-}*/
+}
+*/
 const words = [
     {
         original: 'Wassup',
@@ -82,7 +88,6 @@ const words = [
         translation: 'Экран'
     }
 ]
-
 const notificationMessages = {
     start: {
         hello: 'Hello man. You can learn English. Good Luck'
@@ -98,7 +103,6 @@ const settings = {
 const result = {
     correctAnswersCount: 0
 }
-
 alert(notificationMessages.start.hello);
 
 for (let i = 0; i < words.length; i++) {
