@@ -5,9 +5,9 @@ console.log('it-incubator');
 */
 
 const userInput = window.prompt('write something');
-document.write("user input is: " + userInput);
+document.write('user input is: ' + userInput);
 document.write('<br>');
-document.write("user input is: " + userInput);
+document.write('user input is: ' + userInput);
 document.write('<br>');
-document.write("user input is: " + userInput);
+document.write('user input is: ' + userInput);
 
