@@ -67,3 +67,133 @@ animals.pop()
 console.log(animals)
 animals.unshift(lastAnimal)
 console.log(animals)
+
+let firstAnimal = animals.shift()
+console.log(firstAnimal)
+console.log(animals)
+
+//example6
+let furryAnimals = ['Альпка', 'Кольцевой лемур', 'Йети']
+let scalyAnimals = ['Удав', 'Годзилла']
+let featheredAnimals = ['Ара', 'Додо'] 
+let furryAndScalyAnimals = furryAnimals.concat(scalyAnimals, featheredAnimals)
+console.log(furryAndScalyAnimals)
+
+//example7
+let colors = ['красный', 'зелёный', 'синий']
+console.log(colors.indexOf('синий'))
+console.log(colors.indexOf('зелёный'))
+console.log(colors.indexOf('фиолетовый'))
+
+let insects = ['Пчела', 'Муравей', 'Пчела', 'Пчела', 'Муравей']
+console.log(insects.indexOf('Пчела'))
+
+//example8
+let boringAnimals = ['Мартышка', 'Кот', 'Рыба', 'Ящерица']
+console.log(boringAnimals.join())
+console.log(boringAnimals.join(' - '))
+console.log(boringAnimals.join('*'))
+console.log(boringAnimals.join(' и '))
+
+//example9
+let myNames = ['Николас', 'Эндрю', 'Максвелл', 'Морган']
+console.log(myNames.join(' '))
+
+//example10
+let ages = [11, 14, 79]
+console.log(ages.join(' '))
+
+//example11
+let landmarks = []
+console.log(landmarks.push('Мой дом'))
+console.log(landmarks.push('Дорожка к дому'))
+console.log(landmarks.push('Мигающий фонарь'))
+console.log(landmarks.push('Протекающий гидрант'))
+console.log(landmarks.push('Пожарная станция'))
+console.log(landmarks.push('Приют для кошек'))
+console.log(landmarks.push('Дом подруги'))
+console.log(landmarks)
+
+console.log(landmarks.pop())
+console.log(landmarks)
+console.log(landmarks.pop())
+console.log(landmarks)
+console.log(landmarks.pop())
+console.log(landmarks)
+console.log(landmarks.pop())
+console.log(landmarks)
+console.log(landmarks.pop())
+console.log(landmarks)
+console.log(landmarks.pop())
+console.log(landmarks)
+
+//example12
+console.log(Math.random())
+console.log(Math.random())
+
+console.log(Math.random()*10)
+
+console.log(Math.floor(Math.random()*10))
+console.log(Math.floor(Math.random()*10))
+
+//example13
+let randomWords = ['Взрыв', 'Пещера', 'Принцесса', 'Карандаш']
+let randomIndex = Math.floor(Math.random()*4)
+console.log(randomWords[randomIndex])
+console.log(randomWords[randomIndex])
+
+//example14
+let phrases = [
+    'Звучит неплохо',
+    'Да, это определённо надо сделать',
+    'Не думаю, что это хорошая идея',
+    'Может, не сегодня?',
+    'Компьютер говорит нет'
+]
+// Мне выпить ещё молочного коктейля?
+console.log(phrases[Math.floor(Math.random()*5)])
+console.log(phrases[Math.floor(Math.random()*5)])
+console.log(phrases[Math.floor(Math.random()*5)])
+console.log(phrases[Math.floor(Math.random()*5)])
+
+//example15
+let randomBodyParts = ['глаз', 'нос', 'череп']
+let randomAdjectives = ['вонючая', 'унылая', 'дурацкая']
+let randomWords0 = ['муха', 'выдра', 'дубина', 'мартышка', 'крыса']
+
+let randomBodyPart = randomBodyParts[Math.floor(Math.random()*randomBodyParts.length)]
+let randomAdjective = randomAdjectives[Math.floor(Math.random()*randomAdjectives.length)]
+let randomWord = randomWords0[Math.floor(Math.random()*randomWords0.length)]
+
+let randomInsult = 'У тебя ' + randomBodyPart + ' словно ' + randomAdjective + ' ' + randomWord + '!!!'
+console.log(randomInsult)
+
+//exercise16
+function generateTease1() {
+    let subjects = ['Ты', 'Твой друг', 'Твой сосед', 'Твой брат'];
+    let verbs = ['похож', 'звучит', 'выглядит', 'пахнет'];
+    let adjectives = ['как старый сыр', 'как носок', 'как мусор', 'как перегоревшая лампочка'];
+
+    let randomSubject = subjects[Math.floor(Math.random() * subjects.length)];
+    let randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
+    let randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+
+    return randomSubject + ' ' + randomVerb + ' ' + randomAdjective + '!';
+}
+console.log(generateTease1());
+
+function generateTease2() {
+    let subjects = ['Ты', 'Твой друг', 'Твой сосед', 'Твой брат'];
+    let verbs = ['похож', 'звучит', 'выглядит', 'пахнет'];
+    let adjectives = ['как старый сыр', 'как носок', 'как мусор', 'как перегоревшая лампочка'];
+
+    let randomSubject = subjects[Math.floor(Math.random() * subjects.length)];
+    let randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
+    let randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+
+    return [randomSubject, randomVerb, randomAdjective].join(' ') + '!';
+}
+console.log(generateTease2());
+
+let arr = [3, 2, 1]
+console.log(arr.join(' больше, чем '))
