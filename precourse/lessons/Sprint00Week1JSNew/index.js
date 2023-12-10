@@ -14,7 +14,11 @@ const incubatorInfo = {
     title: 'it-incubator',
     graduatesCount: 2000,
     areYouChampion: true,
-    technologies: ['Front', 'Back', 'DevOps']    
+    technologies: [
+        { title: 'Front' },
+        { title: 'Back' },
+        { title: 'DevOps' }
+    ]
 }
 
 // render
@@ -35,11 +39,11 @@ document.body.append(areYouChampionElement)
 // part 3
 let techSelectElement = document.createElement('select')
 let techSelectOptions0Element = document.createElement('option')
-techSelectOptions0Element.append(incubatorInfo.technologies[0])
+techSelectOptions0Element.append(incubatorInfo.technologies[0].title)
 let techSelectOptions1Element = document.createElement('option')
-techSelectOptions1Element.append(incubatorInfo.technologies[1])
+techSelectOptions1Element.append(incubatorInfo.technologies[1].title)
 let techSelectOptions2Element = document.createElement('option')
-techSelectOptions2Element.append(incubatorInfo.technologies[2])
+techSelectOptions2Element.append(incubatorInfo.technologies[2].title)
 
 techSelectElement.append(techSelectOptions0Element, techSelectOptions1Element, techSelectOptions2Element)
 document.body.append(techSelectElement)
