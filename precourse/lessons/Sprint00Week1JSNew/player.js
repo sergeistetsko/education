@@ -1,5 +1,5 @@
 // data
-let playlist = {
+const playlist = {
     title: 'Hip-Hop Hits',
     coverImageUrl: './playlist1.png',
     info: {
@@ -25,32 +25,37 @@ let playlist = {
 }
 // render
 renderPlaylist(playlist)
-// function
+// functions
 function renderPlaylist(playlistForRendering) {
-    // render playlist header
+    renderPlaylistHeader(playlistForRendering)
+    renderTrack(playlistForRendering.tracks[0])
+    renderTrack(playlistForRendering.tracks[1])
+}
+function renderPlaylistHeader(inputPlaylistForRendering) {
+// render playlist header
     // render image
     let playlistImageElement = document.createElement('img')
-    playlistImageElement.src = playlistForRendering.coverImageUrl
+    playlistImageElement.src = inputPlaylistForRendering.coverImageUrl
     document.body.append(playlistImageElement)
 
     // render title
     let playlistTitleElement = document.createElement('h2')
-    playlistTitleElement.append(playlistForRendering.title)
+    playlistTitleElement.append(inputPlaylistForRendering.title)
     document.body.append(playlistTitleElement)
-
-    let tracksListElement = document.createElement('ul')
-
-    // render track1
-    let track1Element = document.createElement('li')
-    track1Element.append(playlistForRendering.tracks[0].artistName + ' - ' + playlistForRendering.tracks[0].title)
-    tracksListElement.append(track1Element)
-
-    // render track2
-    let track2Element = document.createElement('li')
-    track2Element.append(playlistForRendering.tracks[1].artistName + ' - ' + playlistForRendering.tracks[1].title)
-    tracksListElement.append(track2Element)
-
-    document.body.append(tracksListElement)
 }
+function renderTrack(inputTrackForRendering) {
+    // render track
+    let trackElement = document.createElement('div')
+    trackElement.append(inputTrackForRendering.artistName + ' - ' + inputTrackForRendering.title)
 
+    let playerElement = document.createElement('audio')
+    playerElement.src = inputTrackForRendering.fileUrl
+    playerElement.controls = true
+    trackElement.append(playerElement)
 
+    let coverElement = document.createElement('img')
+    coverElement.src = inputTrackForRendering.coverImageUrl
+    trackElement.append(coverElement)
+
+    document.body.append(trackElement)
+}
