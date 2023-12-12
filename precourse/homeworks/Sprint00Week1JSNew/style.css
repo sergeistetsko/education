@@ -95,7 +95,14 @@ body {
 .elementsBlock {
     display: flex;
     flex-direction: column;
-    row-gap: 6px;
+    align-content: space-evenly;
+    row-gap: 24px;
+    column-gap: 6px;
+}
+.elements1Block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 .miniElementsBlock {
     display: flex;
@@ -103,7 +110,7 @@ body {
 }
 .subElementsBlock {
     display: flex;
-    column-gap: 6px;
+    column-gap: 12px;
 }
 .trackCoverImage {
     width: 48px;
