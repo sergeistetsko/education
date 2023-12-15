@@ -11,26 +11,26 @@ body {
 .section {
     background-color: gray;
 }
-.mainBlock {
+.playlist-container {
     width: 1280px;
     max-height: 100vh;
     background-color: #121212;
 }
-.headerBlock {
+.playlist-header {
     background-color: rgba(26, 26, 26, 0.80);
     backdrop-filter: blur(10px);
     padding: 12px 1107px 12px 64px;
 }
-.sectionBlock {
+.playlist-main {
     padding: 31px 64px 36px;
 }
-.mainTitle {
+.playlist-title {
     color: #FFF;
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 29px;
 }
-.mainElementsBlock {
+.playlist-item {
     border-radius: 4px;
     background: #1C1C1C;
     padding: 24px 36px 47px 35px;
@@ -38,89 +38,89 @@ body {
     flex-direction: column;
     gap: 29px;
 }
-.subWrapper {
+.playlist-subcontainer {
     display: flex;
     gap: 12px;
 }
-.coverInfoBlock {
+.playlist-cover-info {
     display: flex;
     gap: 24px;
 }
-.infoBlock {
+.playlist-info {
     padding-top: 7px;
 }
-.text {
+.playlist-text {
     color: #FFF;
     font-size: 14px;
     font-weight: 500;
     line-height: 24px; /* 171.429% */
 }
-.text1 {
+.playlist-artists {
     color: #8A8A8A;
     font-size: 16px;
     font-weight: 400;
     line-height: 29px;
 }
-.mainText2 {
+.track-artist {
     color: #FFF;
     font-size: 12px;
     font-weight: 500;
 }
-.mainText {
+.highlighted-artists {
     color: #FFF;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px; /* 150% */
     padding-bottom: 10px;
 }
-.text2 {
+.track-title {
     color: #8A8A8A;
     font-size: 12px;
     font-weight: 400;
 }
-.title {
+.playlist-name {
     color: #FFF;
     font-size: 30px;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 15px;
 }
-.titleInfo {
+.playlist-details {
     color: #8A8A8A;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px; /* 171.429% */
     margin-bottom: 16px;
 }
-.elementsBlock {
+.playlist-tracks {
     display: flex;
     flex-direction: column;
     align-content: space-evenly;
     row-gap: 24px;
     column-gap: 6px;
 }
-.elements1Block {
+.track-info-container {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
-.miniElementsBlock {
+.track-info {
     display: flex;
     gap: 6px;
 }
-.subElementsBlock {
+.track-item {
     display: flex;
     column-gap: 12px;
 }
-.trackCoverImage {
+.track-cover {
     width: 48px;
     height: 48px;
 }
-.hotImage {
+.track-hot-indicator {
     width: 12px;
     height: 12px;
 }
-.audioElement {
+.track-audio {
     max-height: 24px;
     width: 347px;
 }
