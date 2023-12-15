@@ -65,6 +65,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 29px;
+    flex-shrink: 1;
 }
 .track-artist {
     color: #FFF;
@@ -73,10 +74,9 @@ body {
 }
 .highlighted-artists {
     color: #FFF;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 24px; /* 150% */
-    padding-bottom: 10px;
 }
 .track-title {
     color: #8A8A8A;
@@ -88,7 +88,7 @@ body {
     font-size: 30px;
     font-weight: 700;
     margin-top: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .playlist-details {
     color: #8A8A8A;
@@ -124,6 +124,10 @@ body {
 .track-hot-indicator {
     width: 12px;
     height: 12px;
+}
+.track-empty-indicator {
+    width: 0;
+    height: 0;
 }
 .track-audio {
     height: 24px;
