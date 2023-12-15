@@ -101,7 +101,7 @@ function createPlaylistContainer() {
     return div;
 }
 
-function createPlaylistHeader(div, playlist) {
+function createPlaylistHeader(div) {
     const section2 = document.createElement("section");
     const h1 = document.createElement("h1");
     const div2 = document.createElement("div");
