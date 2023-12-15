@@ -126,6 +126,8 @@ body {
     height: 12px;
 }
 .track-audio {
-    max-height: 24px;
+    height: 24px;
     width: 347px;
+    background: whitesmoke;
+    border-radius: 4px;
 }

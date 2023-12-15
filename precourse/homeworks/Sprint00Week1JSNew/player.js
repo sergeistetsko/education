@@ -1,4 +1,4 @@
-/*// data
+// data
 const playlist = {
     title: 'Hip-Hop Hits',
     coverImageUrl: './playlist1.png',
@@ -58,4 +58,4 @@ function renderTrack(inputTrackForRendering) {
     trackElement.append(coverElement)
 
     document.body.append(trackElement)
-}*/
+}
