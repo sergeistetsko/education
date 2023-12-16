@@ -1,17 +1,17 @@
-import { createPlaylistsContainer } from './playlist/container/renderContainer.component.js'
-import { createPlaylistsHeader } from './playlist/header/renderHeader.component.js'
-import { createArticles } from './playlist/articles/renderArticles.component.js'
-import { createTracksInfo } from './playlist/tracksInfo/renderTracksInfo.component.js'
-import { createTracks } from './playlist/tracks/renderTracks.component.js'
+import { renderPlaylistContainer } from './playlist/container/renderContainer.component.js'
+import { renderPlaylistHeader } from './playlist/header/renderHeader.component.js'
+import { renderArticles } from './playlist/articles/renderArticles.component.js'
+import { renderTracksInfo } from './playlist/tracksInfo/renderTracksInfo.component.js'
+import { renderPlaylistTracks } from './playlist/tracks/renderTracks.component.js'
 
-export function createPlaylists(playlistsForCreate) {
-    const playlistsContainer = createPlaylistsContainer();
-    const playlistsHeader = createPlaylistsHeader(playlistsContainer, playlistsForCreate);
+export function renderPlaylists(playlistData) {
+    const playlistContainer = renderPlaylistContainer();
+    const playlistHeader = renderPlaylistHeader(playlistContainer, playlistData);
 
-    for (let i = 0; i < playlistsForCreate.length; i++) {
-        const articleDivElements = createArticles(playlistsHeader, playlistsForCreate, i);
-        createTracksInfo(articleDivElements.div3, playlistsForCreate, i);
-        createTracks(articleDivElements.article, playlistsForCreate, i);
+    for (let playlistIndex = 0; playlistIndex < playlistData.length; playlistIndex++) {
+        const articleDivElements = renderArticles(playlistHeader, playlistData, playlistIndex);
+        renderTracksInfo(articleDivElements.divElement, playlistData, playlistIndex);
+        renderPlaylistTracks(articleDivElements.articleElement, playlistData, playlistIndex);
     }
 }
 

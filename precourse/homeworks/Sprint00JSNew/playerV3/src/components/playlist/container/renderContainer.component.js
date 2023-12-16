@@ -1,19 +1,19 @@
-export function createPlaylistsContainer() {
-    const sectionElement = document.createElement("section");
-    const divElement = document.createElement("div");
-    const headerElement = document.createElement("header");
-    const imgElement = document.createElement("img");
+export function renderPlaylistContainer() {
+    const playlistSectionElement = document.createElement("section");
+    const playlistContainerDivElement = document.createElement("div");
+    const playlistHeaderElement = document.createElement("header");
+    const playlistLogoImageElement = document.createElement("img");
 
-    sectionElement.className = "section";
-    divElement.className = "playlist-container";
-    headerElement.className = "playlist-header";
-    imgElement.src = "assets/images/playlistLogo.png";
-    imgElement.alt = "playlistLogo";
+    playlistSectionElement.className = "section";
+    playlistContainerDivElement.className = "playlist-container";
+    playlistHeaderElement.className = "playlist-header";
+    playlistLogoImageElement.src = "assets/images/playlistLogo.png";
+    playlistLogoImageElement.alt = "playlistLogo";
 
-    headerElement.appendChild(imgElement);
-    divElement.appendChild(headerElement);
-    sectionElement.appendChild(divElement);
-    document.body.appendChild(sectionElement);
+    playlistHeaderElement.appendChild(playlistLogoImageElement);
+    playlistContainerDivElement.appendChild(playlistHeaderElement);
+    playlistSectionElement.appendChild(playlistContainerDivElement);
+    document.body.appendChild(playlistSectionElement);
 
-    return divElement;
+    return playlistContainerDivElement;
 }

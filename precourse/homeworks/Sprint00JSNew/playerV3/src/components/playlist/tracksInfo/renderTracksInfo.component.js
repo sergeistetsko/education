@@ -1,27 +1,32 @@
-export function createTracksInfo(articleDiv3Elements, playlistsForCreate, i) {
-    const div4Element = document.createElement("div");
-    const span1Element = document.createElement("span");
-    const h2Element = document.createElement("h2");
-    const span2Element = document.createElement("span");
-    const pElement = document.createElement("p");
-    const span3Element = document.createElement("span");
+export function renderTracksInfo(articleContainer, playlistData, playlistIndex) {
 
-    div4Element.className = "playlist-info";
-    span1Element.className = "playlist-text";
-    span1Element.textContent = "Playlist";
-    h2Element.className = "playlist-name";
-    h2Element.textContent = playlistsForCreate[i].title;
-    span2Element.className = "playlist-details";
-    span2Element.textContent = playlistsForCreate[i].trackInfo.totalTracksCount + " track(-s), " + Math.floor(playlistsForCreate[i].trackInfo.totalTracksDurationInSeconds / 60) + "m " + (playlistsForCreate[i].trackInfo.totalTracksDurationInSeconds % 60) + "s";
-    pElement.className = "playlist-artists";
-    span3Element.className = "highlighted-artists";
-    span3Element.textContent = playlistsForCreate[i].tracks.map(track => track.artistName).join(", ");
-    pElement.textContent = " and others";
+    const playlistInfoDiv = document.createElement("div");
+    const playlistTextSpan = document.createElement("span");
+    const playlistNameHeading = document.createElement("h2");
+    const playlistDetailsSpan = document.createElement("span");
+    const playlistArtistsParagraph = document.createElement("p");
+    const highlightedArtistsSpan = document.createElement("span");
 
-    pElement.prepend(span3Element);
-    div4Element.appendChild(span1Element);
-    div4Element.appendChild(h2Element);
-    div4Element.appendChild(span2Element);
-    div4Element.appendChild(pElement);
-    articleDiv3Elements.appendChild(div4Element);
+
+    playlistInfoDiv.className = "playlist-info";
+    playlistTextSpan.className = "playlist-text";
+    playlistNameHeading.className = "playlist-name";
+    playlistDetailsSpan.className = "playlist-details";
+    playlistArtistsParagraph.className = "playlist-artists";
+    highlightedArtistsSpan.className = "highlighted-artists";
+
+
+    playlistTextSpan.textContent = "Playlist";
+    playlistNameHeading.textContent = playlistData[playlistIndex].title;
+    playlistDetailsSpan.textContent = playlistData[playlistIndex].trackInfo.totalTracksCount + " track(-s), " + Math.floor(playlistData[playlistIndex].trackInfo.totalTracksDurationInSeconds / 60) + "m " + (playlistData[playlistIndex].trackInfo.totalTracksDurationInSeconds % 60) + "s";
+    highlightedArtistsSpan.textContent = playlistData[playlistIndex].tracks.map(track => track.artistName).join(", ");
+    playlistArtistsParagraph.textContent = " and others";
+
+
+    playlistArtistsParagraph.prepend(highlightedArtistsSpan);
+    playlistInfoDiv.appendChild(playlistTextSpan);
+    playlistInfoDiv.appendChild(playlistNameHeading);
+    playlistInfoDiv.appendChild(playlistDetailsSpan);
+    playlistInfoDiv.appendChild(playlistArtistsParagraph);
+    articleContainer.appendChild(playlistInfoDiv);
 }

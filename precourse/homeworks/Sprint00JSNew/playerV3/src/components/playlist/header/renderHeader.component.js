@@ -1,16 +1,16 @@
-export function createPlaylistsHeader(divElement) {
-    const section2Element = document.createElement("section");
-    const h1Element = document.createElement("h1");
-    const div2Element = document.createElement("div");
+export function renderPlaylistHeader(parentDivElement) {
+    const mainPlaylistSectionElement = document.createElement("section");
+    const playlistTitleElement = document.createElement("h1");
+    const playlistSubcontainerDivElement = document.createElement("div");
 
-    section2Element.className = "playlist-main";
-    h1Element.className = "playlist-title";
-    h1Element.textContent = "My Playlists";
-    div2Element.className = "playlist-subcontainer";
+    mainPlaylistSectionElement.className = "playlist-main";
+    playlistTitleElement.className = "playlist-title";
+    playlistTitleElement.textContent = "My Playlists";
+    playlistSubcontainerDivElement.className = "playlist-subcontainer";
 
-    section2Element.appendChild(h1Element);
-    section2Element.appendChild(div2Element);
-    divElement.appendChild(section2Element);
+    mainPlaylistSectionElement.appendChild(playlistTitleElement);
+    mainPlaylistSectionElement.appendChild(playlistSubcontainerDivElement);
+    parentDivElement.appendChild(mainPlaylistSectionElement);
 
-    return div2Element;
+    return playlistSubcontainerDivElement;
 }

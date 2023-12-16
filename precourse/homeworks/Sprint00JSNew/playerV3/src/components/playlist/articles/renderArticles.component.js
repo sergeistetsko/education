@@ -1,19 +1,19 @@
-export function createArticles(div2Element, playlistsForCreate, i) {
-    const articleElement = document.createElement("article");
-    const div3Element = document.createElement("div");
-    const figureElement = document.createElement("figure");
-    const img2Element = document.createElement("img");
+export function renderArticles(playlistContainerElement, playlistData, playlistIndex) {
+    const playlistItemArticleElement = document.createElement("article");
+    const playlistCoverInfoDivElement = document.createElement("div");
+    const playlistCoverFigureElement = document.createElement("figure");
+    const mainCoverImageElement = document.createElement("img");
 
-    articleElement.className = "playlist-item";
-    div3Element.className = "playlist-cover-info";
-    figureElement.className = "playlist-cover";
-    img2Element.src = playlistsForCreate[i].coverImageUrl;
-    img2Element.alt = "mainCoverImage" + (i + 1);
+    playlistItemArticleElement.className = "playlist-item";
+    playlistCoverInfoDivElement.className = "playlist-cover-info";
+    playlistCoverFigureElement.className = "playlist-cover";
+    mainCoverImageElement.src = playlistData[playlistIndex].coverImageUrl;
+    mainCoverImageElement.alt = "mainCoverImage" + (playlistIndex + 1);
 
-    figureElement.appendChild(img2Element);
-    div3Element.appendChild(figureElement);
-    articleElement.appendChild(div3Element);
-    div2Element.appendChild(articleElement);
+    playlistCoverFigureElement.appendChild(mainCoverImageElement);
+    playlistCoverInfoDivElement.appendChild(playlistCoverFigureElement);
+    playlistItemArticleElement.appendChild(playlistCoverInfoDivElement);
+    playlistContainerElement.appendChild(playlistItemArticleElement);
 
-    return {article: articleElement, div3: div3Element};
+    return {articleElement: playlistItemArticleElement, divElement: playlistCoverInfoDivElement};
 }
