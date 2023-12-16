@@ -1,5 +1,5 @@
 // player data
-const playlist = [
+const playlist= [
     {
         title: 'Hip-Hop Hits',
         coverImageUrl: 'assets/images/mainCoverImage1.png',
@@ -79,149 +79,142 @@ const playlist = [
 ]
 // render playlist
 createPlaylist()
-
 // functions
 function createPlaylistContainer() {
-    const section = document.createElement("section");
-    const div = document.createElement("div");
-    const header = document.createElement("header");
-    const img = document.createElement("img");
+    const sectionElement = document.createElement("section");
+    const divElement = document.createElement("div");
+    const headerElement = document.createElement("header");
+    const imgElement = document.createElement("img");
 
-    section.className = "section";
-    div.className = "playlist-container";
-    header.className = "playlist-header";
-    img.src = "assets/images/playlistLogo.png";
-    img.alt = "playlistLogo";
+    sectionElement.className = "section";
+    divElement.className = "playlist-container";
+    headerElement.className = "playlist-header";
+    imgElement.src = "assets/images/playlistLogo.png";
+    imgElement.alt = "playlistLogo";
 
-    header.appendChild(img);
-    div.appendChild(header);
-    section.appendChild(div);
-    document.body.appendChild(section);
+    headerElement.appendChild(imgElement);
+    divElement.appendChild(headerElement);
+    sectionElement.appendChild(divElement);
+    document.body.appendChild(sectionElement);
 
-    return div;
+    return divElement;
 }
+function createPlaylistHeader(divElement) {
+    const section2Element = document.createElement("section");
+    const h1Element = document.createElement("h1");
+    const div2Element = document.createElement("div");
 
-function createPlaylistHeader(div) {
-    const section2 = document.createElement("section");
-    const h1 = document.createElement("h1");
-    const div2 = document.createElement("div");
+    section2Element.className = "playlist-main";
+    h1Element.className = "playlist-title";
+    h1Element.textContent = "My Playlists";
+    div2Element.className = "playlist-subcontainer";
 
-    section2.className = "playlist-main";
-    h1.className = "playlist-title";
-    h1.textContent = "My Playlists";
-    div2.className = "playlist-subcontainer";
+    section2Element.appendChild(h1Element);
+    section2Element.appendChild(div2Element);
+    divElement.appendChild(section2Element);
 
-    section2.appendChild(h1);
-    section2.appendChild(div2);
-    div.appendChild(section2);
-
-    return div2;
+    return div2Element;
 }
-function createArticle(div2, playlist, i) {
-    const article = document.createElement("article");
-    const div3 = document.createElement("div");
-    const figure = document.createElement("figure");
-    const img2 = document.createElement("img");
+function createArticle(div2Element, playlist, i) {
+    const articleElement = document.createElement("article");
+    const div3Element = document.createElement("div");
+    const figureElement = document.createElement("figure");
+    const img2Element = document.createElement("img");
 
-    article.className = "playlist-item";
-    div3.className = "playlist-cover-info";
-    figure.className = "playlist-cover";
-    img2.src = playlist[i].coverImageUrl;
-    img2.alt = "mainCoverImage" + (i + 1);
+    articleElement.className = "playlist-item";
+    div3Element.className = "playlist-cover-info";
+    figureElement.className = "playlist-cover";
+    img2Element.src = playlist[i].coverImageUrl;
+    img2Element.alt = "mainCoverImage" + (i + 1);
 
-    figure.appendChild(img2);
-    div3.appendChild(figure);
-    article.appendChild(div3);
-    div2.appendChild(article);
+    figureElement.appendChild(img2Element);
+    div3Element.appendChild(figureElement);
+    articleElement.appendChild(div3Element);
+    div2Element.appendChild(articleElement);
 
-    return {article: article, div3: div3};
+    return {article: articleElement, div3: div3Element};
 }
+function createTrackInfo(articleDiv3Elements, playlistElement, i) {
+    const div4Element = document.createElement("div");
+    const span1Element = document.createElement("span");
+    const h2Element = document.createElement("h2");
+    const span2Element = document.createElement("span");
+    const pElement = document.createElement("p");
+    const span3Element = document.createElement("span");
 
-function createTrackInfo(articleDiv3, playlist, i) {
-    const div4 = document.createElement("div");
-    const span1 = document.createElement("span");
-    const h2 = document.createElement("h2");
-    const span2 = document.createElement("span");
-    const p = document.createElement("p");
-    const span3 = document.createElement("span");
+    div4Element.className = "playlist-info";
+    span1Element.className = "playlist-text";
+    span1Element.textContent = "Playlist";
+    h2Element.className = "playlist-name";
+    h2Element.textContent = playlist[i].title;
+    span2Element.className = "playlist-details";
+    span2Element.textContent = playlist[i].trackInfo.totalTracksCount + " track(-s), " + Math.floor(playlist[i].trackInfo.totalTracksDurationInSeconds / 60) + "m " + (playlist[i].trackInfo.totalTracksDurationInSeconds % 60) + "s";
+    pElement.className = "playlist-artists";
+    span3Element.className = "highlighted-artists";
+    span3Element.textContent = playlist[i].tracks.map(track => track.artistName).join(", ");
+    pElement.textContent = " and others";
 
-    div4.className = "playlist-info";
-    span1.className = "playlist-text";
-    span1.textContent = "Playlist";
-    h2.className = "playlist-name";
-    h2.textContent = playlist[i].title;
-    span2.className = "playlist-details";
-    span2.textContent = playlist[i].trackInfo.totalTracksCount + " track(-s), " + Math.floor(playlist[i].trackInfo.totalTracksDurationInSeconds / 60) + "m " + (playlist[i].trackInfo.totalTracksDurationInSeconds % 60) + "s";
-    p.className = "playlist-artists";
-    span3.className = "highlighted-artists";
-    span3.textContent = playlist[i].tracks.map(track => track.artistName).join(", ");
-    p.textContent = " and others";
-
-    p.prepend(span3);
-    div4.appendChild(span1);
-    div4.appendChild(h2);
-    div4.appendChild(span2);
-    div4.appendChild(p);
-    articleDiv3.appendChild(div4);
+    pElement.prepend(span3Element);
+    div4Element.appendChild(span1Element);
+    div4Element.appendChild(h2Element);
+    div4Element.appendChild(span2Element);
+    div4Element.appendChild(pElement);
+    articleDiv3Elements.appendChild(div4Element);
 }
-
-function createTracks(article, playlist, i) {
-    const div5 = document.createElement("div");
-    div5.className = "playlist-tracks";
+function createTracks(articleElement, playlistElement, i) {
+    const div5Element = document.createElement("div");
+    div5Element.className = "playlist-tracks";
 
     for (let j = 0; j < playlist[i].tracks.length; j++) {
-        const div6 = document.createElement("div");
-        const img3 = document.createElement("img");
-        const div7 = document.createElement("div");
-        const div8 = document.createElement("div");
-        const img4 = document.createElement("img");
-        const p2 = document.createElement("p");
-        const span4 = document.createElement("span");
-        const audio = document.createElement("audio");
+        const div6Element = document.createElement("div");
+        const img3Element = document.createElement("img");
+        const div7Element = document.createElement("div");
+        const div8Element = document.createElement("div");
+        const img4Element = document.createElement("img");
+        const p2Element = document.createElement("p");
+        const span4Element = document.createElement("span");
+        const audioElement = document.createElement("audio");
 
-        div6.className = "track-item";
-        img3.className = "track-cover";
-        img3.src = playlist[i].tracks[j].coverImageUrl;
-        img3.alt = "Image" + (j + 1) + "Playlist" + (i + 1);
-        div7.className = "track-info-container";
-        div8.className = "track-info";
+        div6Element.className = "track-item";
+        img3Element.className = "track-cover";
+        img3Element.src = playlist[i].tracks[j].coverImageUrl;
+        img3Element.alt = "Image" + (j + 1) + "Playlist" + (i + 1);
+        div7Element.className = "track-info-container";
+        div8Element.className = "track-info";
         if (playlist[i].tracks[j].isHot) {
-            img4.className = "track-hot-indicator";
+            img4Element.className = "track-hot-indicator";
         } else {
-            img4.className = "track-empty-indicator";
+            img4Element.className = "track-empty-indicator";
         }
-        img4.src = playlist[i].tracks[j].isHot ? "assets/images/hotImage.png" : "assets/images/nullImage.png";
-        img4.alt = "hotImage";
-        p2.className = "track-title";
-        span4.className = "track-artist";
-        span4.textContent = playlist[i].tracks[j].artistName + " - ";
-        p2.textContent = playlist[i].tracks[j].title;
-        audio.className = "track-audio";
-        audio.src = playlist[i].tracks[j].fileUrl;
-        audio.controls = true;
+        img4Element.src = playlist[i].tracks[j].isHot ? "assets/images/hotImage.png" : "assets/images/nullImage.png";
+        img4Element.alt = "hotImage";
+        p2Element.className = "track-title";
+        span4Element.className = "track-artist";
+        span4Element.textContent = playlist[i].tracks[j].artistName + " - ";
+        p2Element.textContent = playlist[i].tracks[j].title;
+        audioElement.className = "track-audio";
+        audioElement.src = playlist[i].tracks[j].fileUrl;
+        audioElement.controls = true;
 
-        p2.prepend(span4);
-        div8.appendChild(img4);
-        div8.appendChild(p2);
-        div7.appendChild(div8);
-        div7.appendChild(audio);
-        div6.appendChild(img3);
-        div6.appendChild(div7);
-        div5.appendChild(div6);
+        p2Element.prepend(span4Element);
+        div8Element.appendChild(img4Element);
+        div8Element.appendChild(p2Element);
+        div7Element.appendChild(div8Element);
+        div7Element.appendChild(audioElement);
+        div6Element.appendChild(img3Element);
+        div6Element.appendChild(div7Element);
+        div5Element.appendChild(div6Element);
     }
 
-    article.appendChild(div5);
+    articleElement.appendChild(div5Element);
 }
-
 function createPlaylist() {
     const playlistContainer = createPlaylistContainer();
     const playlistHeader = createPlaylistHeader(playlistContainer, playlist);
 
     for (let i = 0; i < playlist.length; i++) {
-        const articleDivs = createArticle(playlistHeader, playlist, i);
-        createTrackInfo(articleDivs.div3, playlist, i);
-        createTracks(articleDivs.article, playlist, i);
+        const articleDivElements = createArticle(playlistHeader, playlist, i);
+        createTrackInfo(articleDivElements.div3, playlist, i);
+        createTracks(articleDivElements.article, playlist, i);
     }
 }
-
-
