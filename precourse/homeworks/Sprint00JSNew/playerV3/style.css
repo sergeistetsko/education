@@ -1,10 +1,14 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
+}
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: SF UI Display, sans-serif;
     font-style: normal;
     line-height: normal;
 }
@@ -124,14 +128,19 @@ body {
 .track-hot-indicator {
     width: 12px;
     height: 12px;
+    margin-right: 6px;
 }
 .track-empty-indicator {
     width: 0;
     height: 0;
 }
 .track-audio {
-    height: 24px;
-    width: 347px;
-    background: whitesmoke;
+    max-height: 24px;
     border-radius: 4px;
+    filter: invert(100%);
+    max-width: 100%;
+}
+.track-audio::-webkit-media-controls-enclosure {
+    border-radius: 4px;
+    color: #fff;
 }
