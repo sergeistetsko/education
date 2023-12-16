@@ -20,8 +20,7 @@ body {
     align-items: center;
 }
 .playlist-container {
-    width: 1280px;
-    height: 720px;
+    max-width: 1280px;
     background-color: #121212;
 }
 .playlist-header {
@@ -42,7 +41,7 @@ body {
     border-radius: 4px;
     background: #1C1C1C;
     padding: 24px 36px 47px 35px;
-    min-width: 570px;
+    max-width: 570px;
     display: flex;
     flex-direction: column;
     gap: 29px;
@@ -57,11 +56,12 @@ body {
 }
 .playlist-info {
     padding-top: 7px;
+
 }
 .playlist-text {
     color: #FFF;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 24px; /* 171.429% */
 }
 .playlist-artists {
@@ -69,7 +69,6 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 29px;
-    flex-shrink: 1;
 }
 .track-artist {
     color: #FFF;
@@ -78,7 +77,7 @@ body {
 }
 .highlighted-artists {
     color: #FFF;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 24px; /* 150% */
 }
@@ -91,7 +90,7 @@ body {
     color: #FFF;
     font-size: 30px;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 23px;
     margin-bottom: 10px;
 }
 .playlist-details {
@@ -104,22 +103,19 @@ body {
 .playlist-tracks {
     display: flex;
     flex-direction: column;
-    align-content: space-evenly;
-    row-gap: 24px;
-    column-gap: 6px;
+    gap: 24px;
 }
 .track-info-container {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    justify-content: space-between;
 }
 .track-info {
     display: flex;
-    gap: 6px;
 }
 .track-item {
     display: flex;
-    column-gap: 12px;
+    gap: 12px;
 }
 .track-cover {
     width: 48px;
