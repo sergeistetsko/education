@@ -78,7 +78,7 @@ const playlist= [
     },
 ]
 // render playlist
-createPlaylist()
+createPlaylist(playlist)
 // functions
 function createPlaylistContainer() {
     const sectionElement = document.createElement("section");
@@ -115,7 +115,7 @@ function createPlaylistHeader(divElement) {
 
     return div2Element;
 }
-function createArticle(div2Element, playlist, i) {
+function createArticle(div2Element, playlistForCreate, i) {
     const articleElement = document.createElement("article");
     const div3Element = document.createElement("div");
     const figureElement = document.createElement("figure");
@@ -124,7 +124,7 @@ function createArticle(div2Element, playlist, i) {
     articleElement.className = "playlist-item";
     div3Element.className = "playlist-cover-info";
     figureElement.className = "playlist-cover";
-    img2Element.src = playlist[i].coverImageUrl;
+    img2Element.src = playlistForCreate[i].coverImageUrl;
     img2Element.alt = "mainCoverImage" + (i + 1);
 
     figureElement.appendChild(img2Element);
@@ -134,7 +134,7 @@ function createArticle(div2Element, playlist, i) {
 
     return {article: articleElement, div3: div3Element};
 }
-function createTrackInfo(articleDiv3Elements, playlistElement, i) {
+function createTrackInfo(articleDiv3Elements, playlistForCreate, i) {
     const div4Element = document.createElement("div");
     const span1Element = document.createElement("span");
     const h2Element = document.createElement("h2");
@@ -146,12 +146,12 @@ function createTrackInfo(articleDiv3Elements, playlistElement, i) {
     span1Element.className = "playlist-text";
     span1Element.textContent = "Playlist";
     h2Element.className = "playlist-name";
-    h2Element.textContent = playlist[i].title;
+    h2Element.textContent = playlistForCreate[i].title;
     span2Element.className = "playlist-details";
-    span2Element.textContent = playlist[i].trackInfo.totalTracksCount + " track(-s), " + Math.floor(playlist[i].trackInfo.totalTracksDurationInSeconds / 60) + "m " + (playlist[i].trackInfo.totalTracksDurationInSeconds % 60) + "s";
+    span2Element.textContent = playlistForCreate[i].trackInfo.totalTracksCount + " track(-s), " + Math.floor(playlistForCreate[i].trackInfo.totalTracksDurationInSeconds / 60) + "m " + (playlistForCreate[i].trackInfo.totalTracksDurationInSeconds % 60) + "s";
     pElement.className = "playlist-artists";
     span3Element.className = "highlighted-artists";
-    span3Element.textContent = playlist[i].tracks.map(track => track.artistName).join(", ");
+    span3Element.textContent = playlistForCreate[i].tracks.map(track => track.artistName).join(", ");
     pElement.textContent = " and others";
 
     pElement.prepend(span3Element);
@@ -161,7 +161,7 @@ function createTrackInfo(articleDiv3Elements, playlistElement, i) {
     div4Element.appendChild(pElement);
     articleDiv3Elements.appendChild(div4Element);
 }
-function createTracks(articleElement, playlistElement, i) {
+function createTracks(articleElement, playlistForCreate, i) {
     const div5Element = document.createElement("div");
     div5Element.className = "playlist-tracks";
 
@@ -177,23 +177,23 @@ function createTracks(articleElement, playlistElement, i) {
 
         div6Element.className = "track-item";
         img3Element.className = "track-cover";
-        img3Element.src = playlist[i].tracks[j].coverImageUrl;
+        img3Element.src = playlistForCreate[i].tracks[j].coverImageUrl;
         img3Element.alt = "Image" + (j + 1) + "Playlist" + (i + 1);
         div7Element.className = "track-info-container";
         div8Element.className = "track-info";
-        if (playlist[i].tracks[j].isHot) {
+        if (playlistForCreate[i].tracks[j].isHot) {
             img4Element.className = "track-hot-indicator";
         } else {
             img4Element.className = "track-empty-indicator";
         }
-        img4Element.src = playlist[i].tracks[j].isHot ? "assets/images/hotImage.png" : "assets/images/nullImage.png";
+        img4Element.src = playlistForCreate[i].tracks[j].isHot ? "assets/images/hotImage.png" : "assets/images/nullImage.png";
         img4Element.alt = "hotImage";
         p2Element.className = "track-title";
         span4Element.className = "track-artist";
-        span4Element.textContent = playlist[i].tracks[j].artistName + " - ";
-        p2Element.textContent = playlist[i].tracks[j].title;
+        span4Element.textContent = playlistForCreate[i].tracks[j].artistName + " - ";
+        p2Element.textContent = playlistForCreate[i].tracks[j].title;
         audioElement.className = "track-audio";
-        audioElement.src = playlist[i].tracks[j].fileUrl;
+        audioElement.src = playlistForCreate[i].tracks[j].fileUrl;
         audioElement.controls = true;
 
         p2Element.prepend(span4Element);
@@ -208,13 +208,13 @@ function createTracks(articleElement, playlistElement, i) {
 
     articleElement.appendChild(div5Element);
 }
-function createPlaylist() {
+function createPlaylist(playlistForCreate) {
     const playlistContainer = createPlaylistContainer();
-    const playlistHeader = createPlaylistHeader(playlistContainer, playlist);
+    const playlistHeader = createPlaylistHeader(playlistContainer, playlistForCreate);
 
-    for (let i = 0; i < playlist.length; i++) {
-        const articleDivElements = createArticle(playlistHeader, playlist, i);
-        createTrackInfo(articleDivElements.div3, playlist, i);
-        createTracks(articleDivElements.article, playlist, i);
+    for (let i = 0; i < playlistForCreate.length; i++) {
+        const articleDivElements = createArticle(playlistHeader, playlistForCreate, i);
+        createTrackInfo(articleDivElements.div3, playlistForCreate, i);
+        createTracks(articleDivElements.article, playlistForCreate, i);
     }
 }
