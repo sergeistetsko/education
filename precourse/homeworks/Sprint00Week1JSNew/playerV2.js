@@ -77,8 +77,10 @@ const playlist= [
         ],
     },
 ]
+
 // render playlist
 createPlaylist(playlist)
+
 // functions
 function createPlaylistContainer() {
     const sectionElement = document.createElement("section");
