@@ -24,15 +24,14 @@ body {
     align-items: flex-end;
 }
 .building-wrap {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
 .bb1 {
     width: 10%;
     height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .bb1a {
     width: 70%;
