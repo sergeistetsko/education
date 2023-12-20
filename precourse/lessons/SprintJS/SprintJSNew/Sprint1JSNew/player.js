@@ -1,7 +1,7 @@
 // data
 const playlist = {
     title: 'Hip-Hop Hits',
-    coverImageUrl: './playlist1.png',
+    coverImageUrl: '#',
     info: {
         totalTracksCount: 4,
         totalTracksDurationInSeconds: 733
@@ -10,15 +10,15 @@ const playlist = {
         {
             artistName: 'Eminem',
             title: 'Rap God',
-            fileUrl: './Eminem_-_Rap_God.mp3',
-            coverImageUrl: './playlist1.png',
+            fileUrl: '#',
+            coverImageUrl: '#',
             isHot: false
         },
         {
             artistName: '50 Cent',
             title: 'In da Club',
-            fileUrl: './50_Cent_-_In_da_Club.mp3',
-            coverImageUrl: './playlist1.png',
+            fileUrl: '#',
+            coverImageUrl: '#',
             isHot: true
         }
     ]
