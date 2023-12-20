@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: SF UI Display, sans-serif;
+    font-style: normal;
+    line-height: normal;
+}
+.section {
+    background-color: #6D6D6D;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playlist-container {
+    max-width: 1280px;
+    background-color: #121212;
+}
+.playlist-header {
+    background-color: rgba(26, 26, 26, 0.80);
+    backdrop-filter: blur(10px);
+    padding: 12px 1107px 12px 64px;
+}
+.playlist-main {
+    padding: 31px 64px 36px;
+}
+.playlist-title {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 29px;
+}
+.playlist-item {
+    border-radius: 4px;
+    background: #1C1C1C;
+    padding: 24px 36px 47px 35px;
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+.playlist-subcontainer {
+    display: flex;
+    gap: 12px;
+}
+.playlist-cover-info {
+    display: flex;
+    gap: 24px;
+}
+.playlist-info {
+    padding-top: 7px;
+
+}
+.playlist-text {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+.playlist-artists {
+    color: #8A8A8A;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 29px;
+}
+.track-artist {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 500;
+}
+.highlighted-artists {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+.track-title {
+    color: #8A8A8A;
+    font-size: 12px;
+    font-weight: 400;
+}
+.playlist-name {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 23px;
+    margin-bottom: 10px;
+}
+.playlist-details {
+    color: #8A8A8A;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+    margin-bottom: 16px;
+}
+.playlist-tracks {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.track-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.track-info {
+    display: flex;
+}
+.track-item {
+    display: flex;
+    gap: 12px;
+}
+.track-cover {
+    width: 48px;
+    height: 48px;
+}
+.track-hot-indicator {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+}
+.track-empty-indicator {
+    width: 0;
+    height: 0;
+}
+.track-audio {
+    max-height: 24px;
+    border-radius: 4px;
+    filter: invert(100%);
+    max-width: 100%;
+}
+.track-audio::-webkit-media-controls-enclosure {
+    border-radius: 4px;
+    color: #fff;
+}
