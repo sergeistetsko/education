@@ -1,4 +1,4 @@
-// Создание элемента и добавление его в DOM (апенд в документ)
+// Создание элемента и добавление его в DOM (апенд в body)
 const h1Element = document.createElement('h1')
 
 h1Element.append('Hello from IT-incubator')
