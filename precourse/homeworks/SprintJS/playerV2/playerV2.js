@@ -89,8 +89,8 @@ function createPlaylistContainer() {
     const imgElement = document.createElement("img");
 
     sectionElement.className = "section";
-    divElement.className = "playlist-container";
-    headerElement.className = "playlist-header";
+    divElement.className = "playlist-containerPlaylists";
+    headerElement.className = "playlist-headerPlaylists";
     imgElement.src = "assets/images/playlistLogo.png";
     imgElement.alt = "playlistLogo";
 
@@ -181,14 +181,14 @@ function createTracks(articleElement, playlistForCreate, i) {
         img3Element.className = "track-cover";
         img3Element.src = playlistForCreate[i].tracks[j].coverImageUrl;
         img3Element.alt = "Image" + (j + 1) + "Playlist" + (i + 1);
-        div7Element.className = "track-info-container";
+        div7Element.className = "track-info-containerPlaylists";
         div8Element.className = "track-info";
         if (playlistForCreate[i].tracks[j].isHot) {
             img4Element.className = "track-hot-indicator";
         } else {
             img4Element.className = "track-empty-indicator";
         }
-        img4Element.src = playlistForCreate[i].tracks[j].isHot ? "assets/images/hotImage.png" : "assets/images/nullImage.png";
+        img4Element.src = playlistForCreate[i].tracks[j].isHot ? "assets/images/trendImage.png" : "assets/images/nullImage.png";
         img4Element.alt = "hotImage";
         p2Element.className = "track-title";
         span4Element.className = "track-artist";

@@ -88,8 +88,8 @@ let img = document.createElement("img");
 
 // Устанавливаем атрибуты и содержимое
 section.className = "section";
-div.className = "playlist-container";
-header.className = "playlist-header";
+div.className = "playlist-containerPlaylists";
+header.className = "playlist-headerPlaylists";
 img.src = "assets/images/playlistLogo.png";
 img.alt = "playlistLogo";
 
@@ -183,14 +183,14 @@ for (let  i = 0; i < playlist.length; i++) {
         img3.className = "track-cover";
         img3.src = playlist[i].tracks[j].coverImageUrl;
         img3.alt = "Image" + (j + 1) + "Playlist" + (i + 1);
-        div7.className = "track-info-container";
+        div7.className = "track-info-containerPlaylists";
         div8.className = "track-info";
         if (playlist[i].tracks[j].isHot) {
             img4.className = "track-hot-indicator";
         } else {
             img4.className = "track-empty-indicator";
         }
-        img4.src = playlist[i].tracks[j].isHot ? "assets/images/hotImage.png" : "assets/images/nullImage.png";
+        img4.src = playlist[i].tracks[j].isHot ? "assets/images/trendImage.png" : "assets/images/nullImage.png";
         img4.alt = "hotImage";
         p2.className = "track-title";
         span4.className = "track-artist";

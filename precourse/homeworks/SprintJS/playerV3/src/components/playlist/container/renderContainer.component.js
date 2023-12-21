@@ -5,8 +5,8 @@ export function renderPlaylistContainer() {
     const playlistLogoImageElement = document.createElement("img");
 
     playlistSectionElement.className = "section";
-    playlistContainerDivElement.className = "playlist-container";
-    playlistHeaderElement.className = "playlist-header";
+    playlistContainerDivElement.className = "playlist-containerPlaylists";
+    playlistHeaderElement.className = "playlist-headerPlaylists";
     playlistLogoImageElement.src = "assets/images/playlistLogo.png";
     playlistLogoImageElement.alt = "playlistLogo";
 

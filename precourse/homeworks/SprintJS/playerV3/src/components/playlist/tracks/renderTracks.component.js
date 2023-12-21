@@ -18,10 +18,10 @@ export function renderPlaylistTracks(articleContainer, playlistData, playlistInd
         trackCoverImgElement.className = "track-cover";
         trackCoverImgElement.src = currentTrack.coverImageUrl;
         trackCoverImgElement.alt = "Track " + (trackIndex + 1) + " - " + playlistData[playlistIndex].title;
-        trackInfoContainerElement.className = "track-info-container";
+        trackInfoContainerElement.className = "track-info-containerPlaylists";
         trackInfoElement.className = "track-info";
         trackIndicatorImgElement.className = currentTrack.isHot ? "track-hot-indicator" : "track-empty-indicator";
-        trackIndicatorImgElement.src = currentTrack.isHot ? "assets/images/hotImage.png" : "assets/images/nullImage.png";
+        trackIndicatorImgElement.src = currentTrack.isHot ? "assets/images/trendImage.png" : "assets/images/nullImage.png";
         trackIndicatorImgElement.alt = "Hot Track Indicator";
         trackTitleElement.className = "track-title";
         trackArtistElement.className = "track-artist";
