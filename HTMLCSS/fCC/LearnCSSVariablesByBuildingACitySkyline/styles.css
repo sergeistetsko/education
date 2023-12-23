@@ -116,7 +116,11 @@ body {
 .fb1 {
     width: 10%;
     height: 60%;
-
+}
+.fb1a {
+    border-bottom: 7vh solid var(--building-color4);
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
 }
 .fb1b {
     width: 60%;
@@ -133,7 +137,13 @@ body {
             var(--building-color4) 10%,
             transparent 10%,
             transparent 15%
-    );
+    ),
+    repeating-linear-gradient(
+            var(--building-color4) 0%,
+            var(--building-color4) 10%,
+            var(--window-color4) 10%,
+            var(--window-color4) 90%
+    )
 }
 .fb2 {
     width: 10%;
