@@ -9,7 +9,6 @@
     --window-color4: #8cb3d9;
 }
 * {
-    border: 1px solid black;
     box-sizing: border-box;
 }
 body {
@@ -33,6 +32,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+.sky {
+    background: radial-gradient(
+            #ffcf33 0%,
+            #ffcf33 20%,
+            #ffff66 21%,
+            #bbeeff 100%
+    );
 }
 /* BACKGROUND BUILDINGS - "bb" stands for "background building" */
 .bb1 {
@@ -229,7 +236,6 @@ body {
 .fb6 {
     width: 9%;
     height: 38%;
-    background-color: var(--building-color3);
     background: repeating-linear-gradient(
             90deg,
             var(--building-color3) 0%,
