@@ -15,7 +15,6 @@ const incubatorInfo = {
         { title: 'DevOps' }
     ]
 }
-
 // Создание элементов и добавление их в DOM
 // Создание элемента h1 и добавление его в body
 let pageTitleElement = document.createElement('h1')
