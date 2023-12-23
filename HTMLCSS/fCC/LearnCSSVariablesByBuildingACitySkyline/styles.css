@@ -211,7 +211,6 @@ body {
 .fb5 {
     width: 10%;
     height: 33%;
-    background-color: var(--building-color2);
     position: relative;
     right: 10%;
     background: repeating-linear-gradient(
@@ -231,6 +230,17 @@ body {
     width: 9%;
     height: 38%;
     background-color: var(--building-color3);
+    background: repeating-linear-gradient(
+            90deg,
+            var(--building-color3) 0%,
+            var(--building-color3) 10%,
+            transparent 10%,
+            transparent 30%
+    ), repeating-linear-gradient(
+            var(--building-color3),
+            var(--building-color3) 10%,
+            var(--window-color3) 10%,
+            var(--window-color3) 30%)
 }
 .background-buildings, .foreground-buildings {
     position: absolute;
