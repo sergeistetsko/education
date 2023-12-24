@@ -55,22 +55,21 @@ h2 {
 }
 
 @media (max-width: 992px) {
-    .page-wrapper {
-        max-width: 576px;
+    .page-wrapper-section {
         padding-left: 34px;
         padding-right: 34px;
     }
 }
 
 @media (max-width: 576px) {
-    .page-wrapper {
+    .page-wrapper-section {
         padding-left: 24px;
         padding-right: 24px;
     }
 }
 
 @media (max-width: 390px) {
-    .page-wrapper {
+    .page-wrapper-section {
         padding-left: 14px;
         padding-right: 14px;
     }
