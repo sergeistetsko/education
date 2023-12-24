@@ -1,3 +1,4 @@
+/*common styles*/
 * {
     padding: 0;
     margin: 0;
@@ -25,19 +26,7 @@ h2 {
     font-weight: 700;
 }
 
-@media (max-width: 1130px) {
-    h1,
-    h2 {
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 1015px) {
-    h1,
-    h2 {
-        font-size: 20px;
-    }
-}
+/*page-wrapper styles*/
 
 .page-wrapper-header {
     max-width: 1280px;
@@ -54,26 +43,7 @@ h2 {
     background-color: #121212;
 }
 
-@media (max-width: 992px) {
-    .page-wrapper-section {
-        padding-left: 34px;
-        padding-right: 34px;
-    }
-}
-
-@media (max-width: 576px) {
-    .page-wrapper-section {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-}
-
-@media (max-width: 390px) {
-    .page-wrapper-section {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-}
+/*header styles*/
 
 .header {
     display: flex;
@@ -99,23 +69,11 @@ h2 {
     padding-bottom: 29px;
 }
 
-@media (max-width: 576px) {
-    .heading {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-}
+/*playlist styles*/
 
 .playlists-wrapper {
     display: flex;
     gap: 12px;
-}
-
-@media (max-width: 992px) {
-    .playlists-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 .playlist {
@@ -127,32 +85,8 @@ h2 {
     padding: 24px 36px 47px;
 }
 
-@media (max-width: 992px) {
-    .playlist {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-    .playlist {
-        padding: 24px;
-    }
-}
-
-@media (max-width: 390px) {
-    .playlist {
-        padding: 14px;
-    }
-}
-
 .playlist__heading {
     display: flex;
-}
-
-@media (max-width: 576px) {
-    .playlist__heading {
-        flex-direction: column;
-    }
 }
 
 .playlist__cover-wrapper {
@@ -172,24 +106,6 @@ h2 {
     margin-bottom: 23px;
 }
 
-@media (max-width: 1130px) {
-    .playlist__subtitle-wrapper {
-        margin-bottom: 18px;
-    }
-}
-
-@media (max-width: 992px) {
-    .playlist__subtitle-wrapper {
-        margin-bottom: 14px;
-    }
-}
-
-@media (max-width: 576px) {
-    .playlist__subtitle-wrapper {
-        margin-bottom: 10px;
-    }
-}
-
 .playlist__title {
     margin-bottom: 10px;
 }
@@ -206,12 +122,6 @@ h2 {
     line-height: 24px;
 }
 
-@media (max-width: 1130px) {
-    .playlist__artists {
-        font-size: 14px;
-    }
-}
-
 .playlist__and-other {
     color: #8a8a8a;
     font-size: 16px;
@@ -219,17 +129,12 @@ h2 {
     line-height: 24px;
 }
 
+/*track styles*/
+
 .track {
     display: flex;
     align-items: center;
     margin-top: 23px;
-}
-
-@media (max-width: 576px) {
-    .track {
-        flex-direction: column;
-        align-items: start;
-    }
 }
 
 .track__cover {
@@ -270,4 +175,110 @@ h2 {
 .track__audio::-webkit-media-controls-enclosure {
     border-radius: 4px;
     color: #fff;
+}
+
+/*media styles*/
+
+@media (max-width: 1130px) {
+    h1,
+    h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1015px) {
+    h1,
+    h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .page-wrapper-section {
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-wrapper-section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+@media (max-width: 390px) {
+    .page-wrapper-section {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .heading {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .playlists-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .playlist {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .playlist {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 390px) {
+    .playlist {
+        padding: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .playlist__heading {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1130px) {
+    .playlist__subtitle-wrapper {
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .playlist__subtitle-wrapper {
+        margin-bottom: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .playlist__subtitle-wrapper {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .playlist__artists {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .track {
+        flex-direction: column;
+        align-items: start;
+    }
 }
