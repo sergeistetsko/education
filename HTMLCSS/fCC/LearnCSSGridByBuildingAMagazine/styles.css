@@ -55,6 +55,10 @@ main {
     grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
     row-gap: 3rem;
 }
+img {
+    width: 100%;
+    object-fit: cover;
+}
 .heading {
     display: grid;
     grid-column: 2 / 3;
@@ -66,4 +70,16 @@ main {
 }
 .hero {
     grid-column: 1 / -1;
+    position: relative;
 }
+.hero-title {
+    text-align: center;
+    color: orangered;
+    font-size: 8rem;
+}
+.hero-subtitle {
+    font-size: 2.4rem;
+    color: orangered;
+    text-align: center;
+}
+
