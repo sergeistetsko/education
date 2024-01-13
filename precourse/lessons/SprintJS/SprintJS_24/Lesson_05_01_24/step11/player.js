@@ -30,15 +30,12 @@ const playList = {
         }
     ]
 }
-
 renderPlaylist(playList)
-
 function renderPlaylist(anyPlayList) {
     renderPlaylistHeader(anyPlayList.playListInfo)
     renderTrack(anyPlayList.tracks[0])
     renderTrack(anyPlayList.tracks[1])
 }
-
 function renderPlaylistHeader(anyPlayList) {
     const playListTitleElement = document.createElement('h1')
     playListTitleElement.append(anyPlayList.title)
