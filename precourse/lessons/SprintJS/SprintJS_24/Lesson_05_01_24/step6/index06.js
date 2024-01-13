@@ -20,5 +20,5 @@ techSelectOption1Element.value = 2;
 techSelectOption1Element.append('HTML'); // Добавление текста 'HTML' ко второму варианту
 techSelectElement.append(techSelectOption1Element); // Добавление второго варианта в выпадающий список
 
-// Добавление второго варианта в тело документа (вместо этого, вероятно, предполагалось добавить сам выпадающий список)
+// Добавление выпадающего списка (select)
 document.body.append(techSelectElement);
