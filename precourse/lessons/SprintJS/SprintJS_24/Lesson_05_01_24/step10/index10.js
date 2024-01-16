@@ -9,7 +9,7 @@ const info = {
         {id: 3, title: 'DevOps'}
     ]
 }
-// render
+// renderPlaylists
 const pageTitleElement = document.createElement('h1');
 
 pageTitleElement.innerText = info.title;

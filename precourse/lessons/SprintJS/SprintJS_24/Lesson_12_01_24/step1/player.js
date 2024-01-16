@@ -64,7 +64,7 @@ const playLists = [
     }
 ]
 
-// render
+// renderPlaylists
 function renderPlayList(anyPlayList) {
 
     const playListIdElement = document.createElement('span')

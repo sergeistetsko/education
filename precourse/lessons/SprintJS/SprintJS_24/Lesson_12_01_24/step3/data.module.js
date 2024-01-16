@@ -1,3 +1,5 @@
+import {renderPlayLists} from './renderPlaylists/renderPlaylists.module.js'
+
 const playLists = [
     {
         playListId: 1,
@@ -62,3 +64,5 @@ const playLists = [
         ]
     }
 ]
+
+renderPlayLists(playLists)

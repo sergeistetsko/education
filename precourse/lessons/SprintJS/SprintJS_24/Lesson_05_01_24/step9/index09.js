@@ -6,7 +6,7 @@ const info = {
     technologies: ['Front', 'Back', 'DevOps']
 }
 
-// render
+// renderPlaylists
 let pageTitleElement = document.createElement('h1');
 
 pageTitleElement.innerText = info.title;

@@ -3,7 +3,7 @@ const title = 'it-incubator';
 const graduatesCount = 2000;
 const areYouChampion = true;
 
-// render
+// renderPlaylists
 let pageTitleElement = document.createElement('h1');
 
 pageTitleElement.innerText = title;
