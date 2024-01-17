@@ -1,0 +1,144 @@
+/*Сброс стилей по умолчанию*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+/*Стили для секции*/
+section {
+    background-color: #EFF2F9;
+    height: 100vh;
+}
+body {
+    font-style: normal;
+    font-family: Lato, sans-serif;
+    line-height: normal;
+}
+/*Стили для карточки*/
+.card {
+    width: 1170px;
+    height: 800px;
+    background-color: #FFF;
+    box-shadow: 20px 20px 40px 0 rgba(81, 91, 117, 0.25);
+    padding: 60px 0 70px;
+
+}
+/*Стили для левой стороны карточки*/
+.product-image-block {
+    width: 540px;
+    border-right: 2px solid rgba(20, 20, 20, 0.15);
+}
+.preview {
+    width: 80px;
+    height: 80px;
+    background-color: #FFF;
+}
+.preview.selected {
+    box-shadow: 8px 8px 16px 0 rgba(81, 91, 117, 0.25);
+}
+/*Стили для правой стороны карточки*/
+.product-info-block {
+    padding: 0 60px;
+}
+.main-title {
+    color: rgba(20, 20, 20, 0.90);
+    font-family: Montserrat, sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 0.38px;
+    margin-bottom: 5px;
+}
+.subtitle {
+    color: rgba(20, 20, 20, 0.40);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+    margin-bottom: 60px;
+}
+.text {
+    color: rgba(20, 20, 20, 0.70);
+    font-family: Rubik, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+    letter-spacing: 0.18px;
+    margin-bottom: 65px;
+}
+.colors {
+    margin-bottom: 65px;
+}
+.title {
+    color: rgba(20, 20, 20, 0.40);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+/*Стили для кружков*/
+.circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    filter: drop-shadow(2px 2px 4px rgba(81, 91, 117, 0.25));
+}
+.blue {
+    background-color: #013C7D;
+}
+.green {
+    background-color: #63CBA7;
+}
+.red {
+    background-color: #D52F29;
+}
+.black {
+    background-color: #141414;
+}
+.yellow {
+    background-color: #F2C723;
+}
+li.selected {
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 7px;
+    box-shadow: 2px 2px 6px 0 rgba(81, 91, 117, 0.25);
+}
+.quantity {
+    width: 80px;
+    color: rgba(20, 20, 20, 0.80);
+    font-family: Rubik, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    border: none;
+    appearance: none;
+    background-image: url(./assets/images/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 0 top 50%;
+}
+.price {
+    color: rgba(20, 20, 20, 0.80);
+    font-family: Rubik, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+.button {
+    height: 70px;
+    width: 100%;
+    background-color: #141414;
+    color: #FFF;
+    font-family: Rubik, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.18px;
+    border: none;
+    margin-top: 75px;
+}
