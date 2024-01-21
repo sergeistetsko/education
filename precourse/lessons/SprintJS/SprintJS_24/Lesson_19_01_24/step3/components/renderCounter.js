@@ -1,10 +1,10 @@
 import {Header} from './counter/header/Header.js'
 import {Value} from './counter/value/Value.js'
-import {ButtonInc} from './counter/buttons/ButtonInc.js'
-import {ButtonDec} from './counter/buttons/ButtonDec.js'
+import {Button} from './counter/buttons/Button.js'
+import {increaseDataCount, decreaseDataCount} from '../data/data.js'
 
 export function renderCounter(someData) {
     document.body.innerHTML = ''
     // Header, Value, Button
-    document.body.append(Header(), Value(), ButtonInc(), ButtonDec())
+    document.body.append(Header(), Value(), Button('+', increaseDataCount), Button('-', decreaseDataCount))
 }
