@@ -7,7 +7,6 @@ let callback = () => {}
 
 function changeData() {
     data.count++
-    // renderCounter(data)
     callback()
 }
 setInterval(changeData, 1000)
