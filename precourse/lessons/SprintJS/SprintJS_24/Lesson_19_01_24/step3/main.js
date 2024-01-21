@@ -1,7 +1,7 @@
 import {renderCounter} from './components/renderCounter.js'
-import {setCallback} from './data/data.js'
+import {setChangeDataCallback} from './data/data.js'
 
 
 renderCounter()
 
-setCallback(renderCounter)
+setChangeDataCallback(renderCounter)

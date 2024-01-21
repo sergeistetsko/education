@@ -5,12 +5,15 @@ export const data = {
 
 let callback = () => {}
 
-function changeData() {
+export function increaseDataCount() {
     data.count++
     callback()
 }
-setInterval(changeData, 1000)
+export function decreaseDataCount() {
+    data.count--
+    callback()
+}
 
-export function setCallback(newCallback) {
+export function setChangeDataCallback(newCallback) {
     callback = newCallback
 }
