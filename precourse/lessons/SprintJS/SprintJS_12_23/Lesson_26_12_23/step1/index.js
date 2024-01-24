@@ -1,7 +1,16 @@
-import {data} from './data/data.js'
+import {data, subscriber} from './data/data.js'
 import {Todolist} from './components/todolist/todolist.component.js'
 
-const todolist = Todolist(data.todolist)
+subscriber(refreshUI)
 
-const rootElement = document.getElementById('root')
-rootElement.append(todolist)
+function refreshUI() {
+    const todolist = Todolist(data.todolist)
+
+    const rootElement = document.getElementById('root')
+
+    rootElement.innerHTML = ''
+
+    rootElement.append(todolist)
+}
+
+refreshUI()
