@@ -17,6 +17,8 @@ const goldText  = document.querySelector('#goldText')
 const monsterStats = document.querySelector('#monsterStats')
 const monsterName = document.querySelector('#monsterName')
 
+const locations = []
+
 const monsterHealthText = document.querySelector('#monsterHealth')
 function goTown() {
     button1.innerText = 'Go to store'
@@ -52,4 +54,7 @@ button3.onclick = fightDragon
 function buyHealth() {
 }
 function buyWeapon() {
+}
+function update(location) {
+
 }
