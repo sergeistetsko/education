@@ -17,7 +17,12 @@ const goldText  = document.querySelector('#goldText')
 const monsterStats = document.querySelector('#monsterStats')
 const monsterName = document.querySelector('#monsterName')
 
-const locations = [{}]
+const locations = [
+    {
+        name: 'town square',
+        'button text': []
+    }
+]
 
 const monsterHealthText = document.querySelector('#monsterHealth')
 function goTown() {
