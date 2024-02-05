@@ -83,8 +83,10 @@ button2.onclick = goCave
 button3.onclick = fightDragon
 
 function buyHealth() {
-    gold = gold - 10
-    health = health + 10
+    gold -= 10;
+    health += 10;
+    goldText.innerText = gold;
+    healthText.innerText = health;
 }
 function buyWeapon() {
 }
