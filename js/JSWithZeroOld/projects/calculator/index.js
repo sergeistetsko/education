@@ -31,7 +31,8 @@ function onOperationButtonClick(eventObject) {
     makeOperation(operation)
 }
 
-buttonPlus.addEventListener('click', onOperationButtonClick)
-buttonMinus.addEventListener('click', onOperationButtonClick)
-buttonMultiply.addEventListener('click', onOperationButtonClick)
-buttonDivide.addEventListener('click', onOperationButtonClick)
+const operationButtons = [buttonPlus, buttonMinus, buttonMultiply, buttonDivide]
+
+for (let i = 0; i < operationButtons.length; i++) {
+    operationButtons[i].addEventListener('click', onOperationButtonClick)
+}
