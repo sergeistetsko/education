@@ -1,7 +1,4 @@
-const buttonPlus = document.getElementById('button-plus')
-const buttonMinus = document.getElementById('button-minus')
-const buttonMultiply = document.getElementById('button-multiply')
-const buttonDivide = document.getElementById('button-divide')
+const operationButtons = document.getElementsByClassName('operation-block')
 
 const input1 = document.getElementById('number1')
 const input2 = document.getElementById('number2')
@@ -30,8 +27,6 @@ function onOperationButtonClick(eventObject) {
     let operation = clickedElement.innerHTML
     makeOperation(operation)
 }
-
-const operationButtons = [buttonPlus, buttonMinus, buttonMultiply, buttonDivide]
 
 for (let i = 0; i < operationButtons.length; i++) {
     operationButtons[i].addEventListener('click', onOperationButtonClick)
