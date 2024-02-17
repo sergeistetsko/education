@@ -5,43 +5,33 @@ const buttonDivide = document.getElementById('button-divide')
 
 const input1 = document.getElementById('number1')
 const input2 = document.getElementById('number2')
-function getNumber1() {
-    return Number(input1.value)
-}
-function getNumber2() {
-    return Number(input2.value)
-}
 function makeOperation(operationCode) {
+    let number1 = Number(input1.value)
+    let number2 = Number(input2.value)
     
     if (operationCode === '+') {
-        let result = getNumber1() + getNumber2()
+        let result = number1 + number2
         window.alert(result)
     } else if(operationCode === '-') {
-        let result = getNumber1() - getNumber2()
+        let result = number1 - number2
         window.alert(result)
     } else if(operationCode === '*') {
-        let result = getNumber1() * getNumber2()
+        let result = number1 * number2
         window.alert(result)
     } else if(operationCode === '/') {
-        let result = getNumber1() / getNumber2()
+        let result = number1 / number2
         window.alert(result)
     } else {
         window.alert('operation is unknown')
     }
 }
-function onButtonPlusClick() {
-    makeOperation('+')
+function onOperationButtonClick(eventObject) {
+    let clickedElement = eventObject.currentTarget;
+    let operation = clickedElement.innerHTML
+    makeOperation(operation)
 }
-function onButtonMinusClick() {
-    makeOperation('-')
-}
-function onButtonMultiplyClick() {
-    makeOperation('*')
-}
-function onButtonDivideClick() {
-    makeOperation('/')
-}
-buttonPlus.addEventListener('click', onButtonPlusClick)
-buttonMinus.addEventListener('click', onButtonMinusClick)
-buttonMultiply.addEventListener('click', onButtonMultiplyClick)
-buttonDivide.addEventListener('click', onButtonDivideClick)
+
+buttonPlus.addEventListener('click', onOperationButtonClick)
+buttonMinus.addEventListener('click', onOperationButtonClick)
+buttonMultiply.addEventListener('click', onOperationButtonClick)
+buttonDivide.addEventListener('click', onOperationButtonClick)
