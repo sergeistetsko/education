@@ -1,0 +1,22 @@
+li {
+    padding: 10px;
+}
+.hot-item:hover {
+    background-color: blue;
+}
+.realty-item:hover {
+    background-color: green;
+}
+li:hover a {
+    color: white;
+}
+h2 {
+    color: white;
+    padding: 10px;
+}
+.hot-header {
+    background-color: blue;
+}
+.realty-header {
+    background-color: green;
+}
