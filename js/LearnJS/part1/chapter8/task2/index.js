@@ -13,7 +13,6 @@ let n = null + 1
 let o = undefined + 1
 let p = " \t \n" - 2
 
-
 let array = [a, b, c, d, e, f, g, i, h, k, l, n, o, p]
 
 for (let i = 0; i < array.length; i++) {
