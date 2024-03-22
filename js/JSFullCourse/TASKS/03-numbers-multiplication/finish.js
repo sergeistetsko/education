@@ -7,3 +7,10 @@
  *
  * 3. Выведите значение последней переменной в консоль
  */
+
+const anyNumberOne = 10
+const anyNumberTwo = 3
+
+const multiResult = anyNumberOne * anyNumberTwo
+
+console.log(multiResult)
