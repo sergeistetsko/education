@@ -12,3 +12,15 @@
  *
  * 4. Вызовите функцию
  */
+
+/**
+* Разность двух чисел
+* @param {number} number1 - Первое число
+* @param {number} number2 - Второе число
+* @returns {number} Разность чисел number1 и number2
+*/
+function numberDifference(number1, number2) {
+    return number1 - number2
+}
+
+numberDifference(2,1)
