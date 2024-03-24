@@ -14,8 +14,9 @@ function printAndGetHighScore(_scores) {
         count++
     })
     console.log(`Bubbles tests: ${count}`)
-    console.log('Highest bubble score: ' + Math.max(...scores))
+    console.log('Highest bubble score: ' + Math.max(..._scores))
 }
+
 function printBestSolutions(_scores, _bestSolutions) {
     const maxScore = Math.max(..._scores);
     _scores.forEach((element, index) => {
@@ -27,7 +28,7 @@ function printBestSolutions(_scores, _bestSolutions) {
     return _bestSolutions
 }
 function printBestSolution(_scores, _costs, _bestSolutions) {
-    let bestSolution = 1
+    let bestSolution = Math.max(..._costs)
     let minCost = 0
     _bestSolutions.forEach((element, index) => {
         if (bestSolution > _costs[element]) {
@@ -37,6 +38,7 @@ function printBestSolution(_scores, _costs, _bestSolutions) {
     })
     console.log(`Winner: sample #${minCost}`)
 }
+
 
 printAndGetHighScore(scores)
 printBestSolutions(scores, bestSolutions)
